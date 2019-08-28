@@ -156,61 +156,24 @@ $endif$
 \usepackage{titling}
 
 
-
-% $if(compact-title)$
-%%% Change title format to be more compact
-
-% \providecommand{\subtitle}[1]{
-%   \posttitle{
-%     \begin{center}\large#1\end{center}
-%     }
-% }
-
 \setlength{\droptitle}{-2em}
 
-% Create subtitle command for use in maketitle
 
-% $endif$
+
+
 
 $if(title)$
   \title{$title$}
-  % $if(compact-title)$
-  % \pretitle{\vspace{\droptitle}\centering\huge}
-  % \posttitle{\par}
-  % $endif$
 $else$
   \title{}
-  % $if(compact-title)$
-  % \pretitle{\vspace{\droptitle}}
-  % \posttitle{}
-  % $endif$
 $endif$
-% $if(subtitle)$
-% \subtitle{$subtitle$}
-% $endif$
+
 $if(author)$
-  \author{
-    $for(author)$
-      $author$
-      %\par
-    $endfor$
-  }
-  % \author{$author$}
-  % $if(compact-title)$
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  % $endif$
+  \author{$for(author)$$author$ \\ $endfor$}
 $else$
   \author{}
-  % $if(compact-title)$
-  % \preauthor{}\postauthor{}
-  % $endif$
 $endif$
 $if(date)$
-  % $if(compact-title)$
-  % \predate{\centering\large\emph}
-  % \postdate{\par}
-  % $endif$
   \date{$date$}
 $else$
   \date{}
