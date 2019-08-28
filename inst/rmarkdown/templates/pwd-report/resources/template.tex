@@ -155,73 +155,80 @@ $endif$
 \usepackage{graphicx} % for logo
 \usepackage{titling}
 
-%$if(compact-title)$
+
+
+% $if(compact-title)$
 %%% Change title format to be more compact
 
-
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
+% \providecommand{\subtitle}[1]{
+%   \posttitle{
+%     \begin{center}\large#1\end{center}
+%     }
+% }
 
 \setlength{\droptitle}{-2em}
-%$endif$
+
+% Create subtitle command for use in maketitle
+
+% $endif$
 
 $if(title)$
   \title{$title$}
-  %$if(compact-title)$
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-  %$endif$
+  % $if(compact-title)$
+  % \pretitle{\vspace{\droptitle}\centering\huge}
+  % \posttitle{\par}
+  % $endif$
 $else$
   \title{}
-  %$if(compact-title)$
-  \pretitle{\vspace{\droptitle}}
-  \posttitle{}
-  %$endif$
+  % $if(compact-title)$
+  % \pretitle{\vspace{\droptitle}}
+  % \posttitle{}
+  % $endif$
 $endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
-$endif$
+% $if(subtitle)$
+% \subtitle{$subtitle$}
+% $endif$
 $if(author)$
-  \author{$for(author)$$author$$sep$ \\ $endfor$}
-  %$if(compact-title)$
+  \author{
+    $for(author)$
+      $author$
+      %\par
+    $endfor$
+  }
+  % \author{$author$}
+  % $if(compact-title)$
   \preauthor{\centering\large\emph}
   \postauthor{\par}
-  %$endif$
+  % $endif$
 $else$
   \author{}
-  %$if(compact-title)$
-  \preauthor{}\postauthor{}
-  %$endif$
+  % $if(compact-title)$
+  % \preauthor{}\postauthor{}
+  % $endif$
 $endif$
 $if(date)$
-  %$if(compact-title)$
-  \predate{\centering\large\emph}
-  \postdate{\par}
-  %$endif$
+  % $if(compact-title)$
+  % \predate{\centering\large\emph}
+  % \postdate{\par}
+  % $endif$
   \date{$date$}
 $else$
   \date{}
-  %$if(compact-title)$
-  \predate{}\postdate{}
-  %$endif$
 $endif$
 
-
+%% including pwd logo
 \pretitle{
-  %% including pwd logo
   \begin{center}
   \LARGE
   \includegraphics{images/logo.png}\\[\bigskipamount]
 }
 \posttitle{
+  \par % break between title and subtitle
+  % add subtitle
   $if(subtitle)$
     \large{$subtitle$}
   $endif$
+  \par % break between subtitle and author
   \end{center}
 }
 
