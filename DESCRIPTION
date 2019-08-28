@@ -14,5 +14,6 @@ LazyData: true
 Imports:
     grDevices,
     stringr,
-    ggplot2
+    ggplot2,
+    magrittr
 RoxygenNote: 6.1.1
