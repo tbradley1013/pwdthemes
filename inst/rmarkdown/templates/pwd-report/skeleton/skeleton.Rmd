@@ -18,3 +18,13 @@ This file is what a user will see when they select your template. Make sure that
 This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
 
 Finally, be sure to remove this message!
+
+
+## Filler Text
+Where does Philadelphia’s drinking water come from?  
+  
+The sources of the water supply for Philadelphia are the Delaware River (or estuary) and the Schuykill River.
+The Queen Lane and Belmont Water Treatment Plants withdraw water from the Schuylkill River. The Samuel Baxter Water Treatment Plant withdraws water from the Delaware River.  
+  
+All three treatment plants use chlorine as the primary disinfectant and conventional dual-media filtration. The treatment process entails pre-sedimentation, coagulation, flocculation, sedimentation, filtration, and disinfection. The finished water contains a chloramine (chlorine combined with ammonia) residual for secondary disinfection, fluoride for dental health, and zinc orthophosphate for corrosion control.  
+  
