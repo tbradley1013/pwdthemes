@@ -152,12 +152,6 @@ $if(pageheader)$
   \pageheader{$pageheader$}
 $endif$
 
-%% including pwd logo
-\begin{center}
-\LARGE
-\includegraphics[width=8cm,height=10cm]{images/logo.png}\\[\bigskipamount]
-\end{center}
-
 
 $if(compact-title)$
 %%% Change title format to be more compact
@@ -221,9 +215,18 @@ $endfor$
 
 \begin{document}
 
+%% including pwd logo
+\begin{center}
+\LARGE
+\includegraphics[width=8cm,height=10cm]{images/logo.png}\\[\bigskipamount]
+\end{center}
+
+
 $if(title)$
 \maketitle
 $endif$
+
+\newpage
 
 $if(abstract)$
 \begin{abstract}
@@ -233,8 +236,9 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
+
 $if(toc)$
 {
 \hypersetup{linkcolor=black}
@@ -248,6 +252,9 @@ $endif$
 $if(lof)$
 \listoffigures
 $endif$
+
+\newpage
+
 $body$
 
 $if(natbib)$
