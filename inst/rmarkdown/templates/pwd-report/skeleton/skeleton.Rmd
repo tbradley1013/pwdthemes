@@ -5,6 +5,8 @@ author: "Your Name"
 date: "The Date"
 output: pwdthemes::pwd_report
 pageheader: "PWD Report Template - pwdthemes"
+footer: true
+geometry: margin=1in
 ---
 
 ```{r setup, include=FALSE}
