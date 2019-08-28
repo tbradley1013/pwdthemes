@@ -136,9 +136,33 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
+%% fancy headers
+\usepackage{fancyhdr}
+\providecommand{\pageheader}[1]{
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyhead[LO,LE]{\textsl{\rightmark}}
+  \fancyhead[RO, RE]{\textbf{#1}}
+  \fancyfoot{}
+  \fancyfoot[RO, RE]{\thepage}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+$if(pageheader)$
+  \pageheader{$pageheader$}
+$endif$
+
+%% including pwd logo
+\begin{center}
+\LARGE
+\includegraphics[width=8cm,height=10cm]{images/logo.png}\\[\bigskipamount]
+\end{center}
+
+
 $if(compact-title)$
 %%% Change title format to be more compact
 \usepackage{titling}
+
 
 % Create subtitle command for use in maketitle
 \providecommand{\subtitle}[1]{
