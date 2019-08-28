@@ -1,8 +1,10 @@
 ---
-title: "Template Title"
+title: "PWD Report"
+subtitle: "A report template for the Philadelphia Water Department"
 author: "Your Name"
 date: "The Date"
-output: output_format
+output: pdf_document
+pageheader: "PWD Report Template - pwdthemes"
 ---
 
 ```{r setup, include=FALSE}
