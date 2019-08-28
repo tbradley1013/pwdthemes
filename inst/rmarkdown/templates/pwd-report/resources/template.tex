@@ -152,8 +152,10 @@ $if(pageheader)$
   \pageheader{$pageheader$}
 $endif$
 
+\usepackage{graphicx} % for logo
 
-$if(compact-title)$
+
+%$if(compact-title)$
 %%% Change title format to be more compact
 \usepackage{titling}
 
@@ -166,60 +168,66 @@ $if(compact-title)$
 }
 
 \setlength{\droptitle}{-2em}
-$endif$
+%$endif$
 
 $if(title)$
   \title{$title$}
-  $if(compact-title)$
+  %$if(compact-title)$
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  $endif$
+  %$endif$
 $else$
   \title{}
-  $if(compact-title)$
+  %$if(compact-title)$
   \pretitle{\vspace{\droptitle}}
   \posttitle{}
-  $endif$
+  %$endif$
 $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 $if(author)$
   \author{$for(author)$$author$$sep$ \\ $endfor$}
-  $if(compact-title)$
+  %$if(compact-title)$
   \preauthor{\centering\large\emph}
   \postauthor{\par}
-  $endif$
+  %$endif$
 $else$
   \author{}
-  $if(compact-title)$
+  %$if(compact-title)$
   \preauthor{}\postauthor{}
-  $endif$
+  %$endif$
 $endif$
 $if(date)$
-  $if(compact-title)$
+  %$if(compact-title)$
   \predate{\centering\large\emph}
   \postdate{\par}
-  $endif$
+  %$endif$
   \date{$date$}
 $else$
   \date{}
-  $if(compact-title)$
+  %$if(compact-title)$
   \predate{}\postdate{}
-  $endif$
+  %$endif$
 $endif$
+
+
+\pretitle{
+  %% including pwd logo
+  \begin{center}
+  \LARGE
+  \includegraphics{images/logo.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+
 
 $for(header-includes)$
 $header-includes$
 $endfor$
 
 \begin{document}
+\pagenumbering{gobble} % no page numbers on title page
 
-%% including pwd logo
-\begin{center}
-\LARGE
-\includegraphics[width=8cm,height=10cm]{images/logo.png}\\[\bigskipamount]
-\end{center}
 
 
 $if(title)$
@@ -227,6 +235,7 @@ $if(title)$
 $endif$
 
 \newpage
+\pagenumbering{roman} % roman numerals for all pre body stuff
 
 $if(abstract)$
 \begin{abstract}
@@ -254,6 +263,7 @@ $if(lof)$
 $endif$
 
 \newpage
+\pagenumbering{arabic} % arabic numbering for body
 
 $body$
 
