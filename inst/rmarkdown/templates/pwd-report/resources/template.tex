@@ -153,11 +153,11 @@ $if(pageheader)$
 $endif$
 
 \usepackage{graphicx} % for logo
-
+\usepackage{titling}
 
 %$if(compact-title)$
 %%% Change title format to be more compact
-\usepackage{titling}
+
 
 
 % Create subtitle command for use in maketitle
@@ -218,7 +218,12 @@ $endif$
   \LARGE
   \includegraphics{images/logo.png}\\[\bigskipamount]
 }
-\posttitle{\end{center}}
+\posttitle{
+  $if(subtitle)$
+    \large{$subtitle$}
+  $endif$
+  \end{center}
+}
 
 
 $for(header-includes)$
