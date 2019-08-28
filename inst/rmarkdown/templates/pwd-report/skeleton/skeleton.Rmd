@@ -21,9 +21,21 @@ This template will include two images. Both of these images will be in the `imag
 
 The `pageheader` yaml option allows you to set what will be displayed along the heading of each page on the right hand side. This text will be bolded. It will be on the right hand side of the header, opposite the section name which will be on the left hand side. If you do not want a pageheader, you can remove this argument. 
 
+This template also creates commands that can be used to create full-page landscape figures. You would implement it by doing the following:
 
+```
+\newpage
+\blandscape
 
+# figure
 
+\newpage
+\elandscape
+```
+
+The `\blandscape` function stands for "Begin Landscape" and starts the new page as a landscape rather than portrait. Likewise, the `\elandscape` function stands for "End Landscape" and ends the landscape on the next page.
+
+Outside of the features mentioned above, all of the normal Rmarkdown features should be applicable to this theme as well. If you find any bugs, please file an issue at the [Github repo](https://github.com/tbradley1013/pwdthemes/issues)
 
 
 ## Filler Text
