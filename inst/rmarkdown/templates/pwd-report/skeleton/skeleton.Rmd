@@ -3,7 +3,7 @@ title: "PWD Report"
 subtitle: "A report template for the Philadelphia Water Department"
 author: "Your Name"
 date: "The Date"
-output: pdf_document
+output: pwdthemes::pwd_report
 pageheader: "PWD Report Template - pwdthemes"
 ---
 
