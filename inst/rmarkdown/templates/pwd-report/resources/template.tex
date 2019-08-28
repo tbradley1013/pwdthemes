@@ -154,13 +154,14 @@ $endif$
 
 \usepackage{graphicx} % for logo
 \usepackage{titling}
-
+\usepackage{wallpaper}
 
 \setlength{\droptitle}{-2em}
 
-
-
-
+$if(footer)$
+  \setlength{\wpYoffset}{-12.68cm}
+  \CenterWallPaper{0.6}{images/footer.png}
+$endif$
 
 $if(title)$
   \title{$title$}
