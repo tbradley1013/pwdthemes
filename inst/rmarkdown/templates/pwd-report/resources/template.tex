@@ -136,8 +136,15 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
-%% fancy headers
+%% Things below here are editted
+%%-------------------------------
+\usepackage{graphicx} % for logo
+\usepackage{titling} % for subtitle
+\usepackage{wallpaper} % for footer logo
 \usepackage{fancyhdr}
+
+
+%% fancy headers
 \providecommand{\pageheader}[1]{
   \pagestyle{fancy}
   \fancyhead{}
@@ -152,9 +159,7 @@ $if(pageheader)$
   \pageheader{$pageheader$}
 $endif$
 
-\usepackage{graphicx} % for logo
-\usepackage{titling}
-\usepackage{wallpaper}
+
 
 \setlength{\droptitle}{-2em}
 
