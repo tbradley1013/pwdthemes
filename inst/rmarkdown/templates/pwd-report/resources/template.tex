@@ -191,7 +191,12 @@ $endif$
 \pretitle{
   \begin{center}
   \LARGE
-  \includegraphics{images/logo.png}\\[\bigskipamount]
+  $if(logo)$
+    \includegraphics{$logo$}\\[\bigskipamount]
+  $else$
+    \includegraphics{images/logo.png}\\[\bigskipamount]
+  $endif$
+
 }
 \posttitle{
   \par % break between title and subtitle
