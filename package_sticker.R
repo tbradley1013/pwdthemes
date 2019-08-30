@@ -21,4 +21,4 @@ sticker(logo, package = "pwdthemes",
 
 pkg_sticker <- image_read("pwdthemes.png")
 
-pkg_sticker %>% image_scale(200) %>% image_write("pwdthemes.png")
+pkg_sticker %>% image_scale(150) %>% image_write("pwdthemes.png")
