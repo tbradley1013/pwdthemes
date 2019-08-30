@@ -41,7 +41,24 @@ devtools::install_github("tbradley1013/pwdthemes")
 
 ## `ggplot2` scales
 
-This package provides functions that allow you to easily add PWD colors to `ggplot2` figures. These can be added using the `scale_color_pwd` and `scale_fill_pwd` functions depending on whether you are using the color or fill aesthetic. There are several different color options that are detailed in the help page, see `?pwd_pals`. These palettes are based on the [PWD Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf), A few of them will be demonstrated here:
+This package provides functions that allow you to easily add PWD colors to `ggplot2` figures. These can be added using the `scale_color_pwd` and `scale_fill_pwd` functions depending on whether you are using the color or fill aesthetic. There are several different color options that are detailed in the help page, see `?pwd_pals`. These palettes are based on the [PWD Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf). The available palettes are shown in the table below. 
+
+| Palette | Default n | Colors |
+|---------|-----------|--------|
+| main | 7 | Blue (#0078C8), Persian Green (#00B388), Cerulean (#00B5E2), Resolution Blue (#001A70), Pear (#DBE442), Ziggurat (#B8DDE1), Botticelli (#C6DAE7) |
+| main_dark | 4 | Blue (#0078C8), Persian Green (#00B388), Cerulean (#00B5E2), Resolution Blue (#001A70) |
+| main_light | 4 | Blue (#0078C8), Pear (#DBE442), Ziggurat (#B8DDE1), Botticelli (#C6DAE7) |
+| highlights | 6 | Tango (#F37720), Burnt Sienna (#F26C51), Blue Marguerite (#7474C1), Grandis (#FDD086), Zinnwaldite (#ECC382), Gray Suit (#C6C4D2) |
+| highlights_dark| 3 | Tango (#F37720), Burnt Sienna (#F26C51), Blue Marguerite (#7474C1) |
+| highlights_light | 3 | Grandis (#FDD086), Zinnwaldite (#ECC382), Gray Suit (#C6C4D2) |
+| map | 4 | Muddy Waters (#B9975B), Trendy Green (#76881D), Primrose (#F1EB9C), Pine Glade (#BFCC80) |
+| map_dark | 2 | Muddy Waters (#B9975B), Trendy Green (#76881D) |
+| map_light | 2 | Primrose (#F1EB9C), Pine Glade (#BFCC80) |
+| dark | 7 | Blue (#0078C8), Persian Green (#00B388), Cerulean (#00B5E2), Resolution Blue (#001A70), Tango (#F37720), Burnt Sienna (#F26C51), Blue Marguerite (#7474C1) |
+| light | 7 | Blue (#0078C8), Pear (#DBE442), Ziggurat (#B8DDE1), Botticelli (#C6DAE7), Grandis (#FDD086), Zinnwaldite (#ECC382), Gray Suit (#C6C4D2) | 
+| full | 13 | Blue (#0078C8), Persian Green (#00B388), Cerulean (#00B5E2), Resolution Blue (#001A70), Pear (#DBE442), Ziggurat (#B8DDE1), Botticelli (#C6DAE7), Tango (#F37720), Burnt Sienna (#F26C51), Blue Marguerite (#7474C1), Grandis (#FDD086), Zinnwaldite (#ECC382), Gray Suit (#C6C4D2) |
+
+A few of them will be demonstrated here:
 
 ```{r}
 library(pwdthemes)
@@ -97,3 +114,14 @@ pc_dark + pf_dark
 
 
 ### View PWD Palettes
+
+You can view what the palette you choose will look like for any given number of variables using the `view_pwd_palette` function. You simply have to pass the palette you are interested as a character string and the number of levels of color required. If you do not pass a number to the n argument, it will show you the default number of colors for a given palette
+
+```{r view-dark}
+view_pwd_palette("dark")
+```
+
+```{r view-dark-4}
+view_pwd_palette("dark", 4)
+
+```
