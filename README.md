@@ -1,0 +1,103 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# pwdthemes
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of `pwdthemes` is to provide easy to use theme options for
+employees of the Philadelphia Water Department within R and Rmarkdown.
+This package provides color and fill options for `ggplot2` figures. It
+also provides rmarkdown templates that will allow people to easy produce
+Rmarkdown reports with PWD branding on them.
+
+## Installation
+
+If you are within the PWD network, you can install the released version
+of pwdthemes from [PWD’s Internal Package
+Directory](http://pwdrstudio/bls-cran/) with:
+
+``` r
+install.packages("pwdthemes", repos = "http://pwdrstudio/bls-cran/")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("tbradley1013/pwdthemes")
+```
+
+**NOTE: you will have to have
+[RTools](https://cran.r-project.org/bin/windows/Rtools/) installed in
+order to install this package using either `install.packages` or
+`install_github` methods**
+
+## `ggplot2` scales
+
+This package provides functions that allow you to easily add PWD colors
+to `ggplot2` figures. These can be added using the `scale_color_pwd` and
+`scale_fill_pwd` functions depending on whether you are using the color
+or fill aesthetic. There are several different color options that are
+detailed in the help page, see `?pwd_pals`. These palettes are based on
+the [PWD
+Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf),
+A few of them will be demonstrated here:
+
+``` r
+library(pwdthemes)
+library(ggplot2)
+library(dplyr)
+library(ggridges)
+library(patchwork)
+```
+
+``` r
+large_diamonds <- diamonds %>% 
+  filter(carat > 2)
+
+pc <- ggplot(large_diamonds, aes(price, carat, color = cut)) + 
+  geom_point() + 
+  theme_bw()
+
+pf <- ggplot(large_diamonds, aes(price, cut, fill = cut)) + 
+  geom_density_ridges() + 
+  theme_bw()
+```
+
+### Main
+
+``` r
+pc_main <- pc + scale_color_pwd("main")
+pf_main <- pf + scale_fill_pwd("main")
+
+pc_main + pf_main
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+### Main Dark
+
+``` r
+pc_main_d <- pc + scale_color_pwd("main_dark")
+pf_main_d <- pf + scale_fill_pwd("main_dark")
+
+pc_main_d + pf_main_d
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+### Dark
+
+``` r
+pc_dark <- pc + scale_color_pwd("dark")
+pf_dark <- pf + scale_fill_pwd("dark")
+
+pc_dark + pf_dark
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+
+### View PWD Palettes
