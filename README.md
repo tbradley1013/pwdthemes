@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pwdthemes <img src="pwdthemes.png" align="right" />
+# pwdthemes <img src="pwdthemes.png" align="right" width="200px" height="232px" />
 
 <!-- badges: start -->
 
