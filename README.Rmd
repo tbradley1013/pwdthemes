@@ -39,9 +39,9 @@ devtools::install_github("tbradley1013/pwdthemes")
 ```
 **NOTE: you will have to have [RTools](https://cran.r-project.org/bin/windows/Rtools/) installed in order to install this package using either `install.packages` or `install_github` methods**
 
-## `ggplot2` scales
+## Palettes and `ggplot2` scales
 
-This package provides functions that allow you to easily add PWD colors to `ggplot2` figures. These can be added using the `scale_color_pwd` and `scale_fill_pwd` functions depending on whether you are using the color or fill aesthetic. There are several different color options that are detailed in the help page, see `?pwd_pals`. These palettes are based on the [PWD Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf). The available palettes are shown in the table below. 
+This package provides functions that allow you to easily add PWD palettes to `ggplot2` figures. These can be added using the `scale_color_pwd` and `scale_fill_pwd` functions depending on whether you are using the color or fill aesthetic. The palettes provided with these functions are based on the [PWD Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf). The available palettes are shown in the table below. 
 
 | Palette | Default n | Colors |
 |---------|-----------|--------|
@@ -83,7 +83,7 @@ pf <- ggplot(large_diamonds, aes(price, cut, fill = cut)) +
 
 ### Main
 
-```{r, fig.width = 10, fig.height = 4}
+```{r main, fig.width = 10, fig.height = 4}
 pc_main <- pc + scale_color_pwd("main")
 pf_main <- pf + scale_fill_pwd("main")
 
@@ -93,7 +93,7 @@ pc_main + pf_main
 
 ### Main Dark
 
-```{r, fig.width = 10, fig.height = 4}
+```{r main_dark, fig.width = 10, fig.height = 4}
 pc_main_d <- pc + scale_color_pwd("main_dark")
 pf_main_d <- pf + scale_fill_pwd("main_dark")
 
@@ -104,7 +104,7 @@ pc_main_d + pf_main_d
 
 ### Dark
 
-```{r, fig.width = 10, fig.height = 4}
+```{r dark, fig.width = 10, fig.height = 4}
 pc_dark <- pc + scale_color_pwd("dark")
 pf_dark <- pf + scale_fill_pwd("dark")
 

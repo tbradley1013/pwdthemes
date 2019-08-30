@@ -35,14 +35,13 @@ devtools::install_github("tbradley1013/pwdthemes")
 order to install this package using either `install.packages` or
 `install_github` methods**
 
-## `ggplot2` scales
+## Palettes and `ggplot2` scales
 
-This package provides functions that allow you to easily add PWD colors
-to `ggplot2` figures. These can be added using the `scale_color_pwd` and
-`scale_fill_pwd` functions depending on whether you are using the color
-or fill aesthetic. There are several different color options that are
-detailed in the help page, see `?pwd_pals`. These palettes are based on
-the [PWD
+This package provides functions that allow you to easily add PWD
+palettes to `ggplot2` figures. These can be added using the
+`scale_color_pwd` and `scale_fill_pwd` functions depending on whether
+you are using the color or fill aesthetic. The palettes provided with
+these functions are based on the [PWD
 Styleguide](http://waternet/news/The_New_Philadelphia_Water_Brand/PWD_StyleGuidelines.pdf).
 The available palettes are shown in the table below.
 
@@ -93,7 +92,7 @@ pf_main <- pf + scale_fill_pwd("main")
 pc_main + pf_main
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-main-1.png" width="100%" />
 
 ### Main Dark
 
@@ -104,7 +103,7 @@ pf_main_d <- pf + scale_fill_pwd("main_dark")
 pc_main_d + pf_main_d
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-main_dark-1.png" width="100%" />
 
 ### Dark
 
@@ -115,7 +114,7 @@ pf_dark <- pf + scale_fill_pwd("dark")
 pc_dark + pf_dark
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-dark-1.png" width="100%" />
 
 ### View PWD Palettes
 
