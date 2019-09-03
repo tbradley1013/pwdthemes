@@ -143,6 +143,7 @@ $endif$
 \usepackage{wallpaper} % for footer logo
 \usepackage{fancyhdr}
 \usepackage{lscape}
+\usepackage{enumitem}
 
 
 \newcommand{\blandscape}{\begin{landscape}}
@@ -156,9 +157,9 @@ $else$
   \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{}}}
 $endif$
 $if(logo)$
-  \fancyhead[R]{\includegraphics{$logo$}}
+  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
 $else$
-  \fancyhead[R]{\includegraphics{images/logo.png}}
+  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{images/logo.png}}
 $endif$
 
 
@@ -192,7 +193,7 @@ $endfor$
     \item[RE:] \bfseries{$subject$}
   $endif$
 \end{description}
-\vspace{-20pt}
+\vspace{-10pt}
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-25pt}
 
