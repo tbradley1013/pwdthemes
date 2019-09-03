@@ -23,7 +23,7 @@ The `pageheader` yaml option allows you to set what will be displayed along the 
 
 This template also creates commands that can be used to create full-page landscape figures. You would implement it by doing the following:
 
-```
+
 \newpage
 \blandscape
 
@@ -31,18 +31,44 @@ This template also creates commands that can be used to create full-page landsca
 
 \newpage
 \elandscape
-```
+
 
 The `\blandscape` function stands for "Begin Landscape" and starts the new page as a landscape rather than portrait. Likewise, the `\elandscape` function stands for "End Landscape" and ends the landscape on the next page.
 
 Outside of the features mentioned above, all of the normal Rmarkdown features should be applicable to this theme as well. If you find any bugs, please file an issue at the [Github repo](https://github.com/tbradley1013/pwdthemes/issues)
 
 
-## Filler Text
-Where does Philadelphia’s drinking water come from?  
-  
-The sources of the water supply for Philadelphia are the Delaware River (or estuary) and the Schuykill River.
-The Queen Lane and Belmont Water Treatment Plants withdraw water from the Schuylkill River. The Samuel Baxter Water Treatment Plant withdraws water from the Delaware River.  
-  
-All three treatment plants use chlorine as the primary disinfectant and conventional dual-media filtration. The treatment process entails pre-sedimentation, coagulation, flocculation, sedimentation, filtration, and disinfection. The finished water contains a chloramine (chlorine combined with ammonia) residual for secondary disinfection, fluoride for dental health, and zinc orthophosphate for corrosion control.  
-  
+## R content
+
+The benefit of using Rmarkdown is that you can easily integrate your text and code into a single document which can then be easily rendered into a publication quality document. You can include R code by using "chunks" as follows:
+
+```{r load-libraries}
+library(ggplot2)
+library(dplyr)
+library(pwdthemes)
+```
+
+```{r manipulate-data}
+large_diamonds <- diamonds %>% 
+  filter(carat > 2.2)
+```
+
+You can embed R figures directly into the document. 
+
+```{r plot-large-diamonds, fig.width=8, fig.height=4}
+large_diamonds %>% 
+  ggplot(aes(price, carat, color = cut)) + 
+  geom_point() + 
+  theme_bw() + 
+  labs(
+    title = "Diamond Carat vs Price",
+    subtitle = "Only Diamonds with carat > 2.2 shown"
+  ) + 
+  scale_color_pwd("dark")
+
+```
+
+In addition to embedding R figures and code, you can also embed images in the document:
+
+![](images/logo.png)
+
