@@ -72,3 +72,6 @@ In addition to embedding R figures and code, you can also embed images in the do
 
 ![](images/logo.png)
 
+## More
+
+To see more ways to use Rmarkdwon and further capabilities, check out the [Rmarkdown website](https://rmarkdown.rstudio.com/index.html) and [free online book](https://bookdown.org/yihui/rmarkdown/)
