@@ -23,8 +23,34 @@ This template is designed to create a standard memo template that fits with PWD 
 
 This template includes two images, similar to the PWD Report tempalte. These images will be in the `images/` subdirectory of the directory that contains the Rmarkdown file. The `footer.png` file is the same as the PWD Report Tempalte and is the footer that is included on all PWD documents. If you do not want to include this image in your memo, than you can set `footer: false` in the YAML of your report. The other image is a PWD logo. This is a logo without the commissioner's name, so that it can fit more easily in the header of the document. 
 
-There are several yaml options that will allow for users to easily change the look and feel of the memo. If you want to 
+There are several yaml options that will allow for users to easily change the look and feel of the memo. The default value, if specified, indicates the value that will be used if the given yaml parameter is not specified in your .Rmd document. If no default is shown, then the aregument is ignored if no value is given
 
+  * **from**: Who the memo is from (can be multiple)
+  * **to**: Who the memo is to (can be multiple)
+  * **date**: Date of the memo
+  * **subject**: The subject of the memo
+  * **margin**: set the hosrizontal margin (default = 1in)
+  * **pageheader**: set the major pageheader (default = "MEMORANDUM")
+  * **pagesubheader**: set the minor pageheader 
+  * **logo**: set the logo used in upper right hand of page (default = `images/logo.png`)
+  * **headheight**: set the margin between the header and the text at the top of the page (default = 26pt - NOTE: if this is decreased it may cause issue with the positioning of the page numbers)
+  * **headrule**: whether to include a horizontal rule between the header and the text (default = false)
+  * **footer**: whether to include the PWD footer (default = true)
+
+This template also creates commands that can be used to create full-page landscape figures. You would implement it by doing the following:
+
+
+\newpage
+\blandscape
+
+![](images/logo.png)
+
+\newpage
+\elandscape
+
+The `\blandscape` function stands for "Begin Landscape" and starts the new page as a landscape rather than portrait. Likewise, the `\elandscape` function stands for "End Landscape" and ends the landscape on the next page.
+
+Outside of the features mentioned above, all of the normal Rmarkdown features should be applicable to this theme as well. If you find any bugs, please file an issue at the [Github repo](https://github.com/tbradley1013/pwdthemes/issues)
 
 ## R content
 
