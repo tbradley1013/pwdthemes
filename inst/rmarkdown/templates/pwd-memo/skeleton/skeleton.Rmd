@@ -1,6 +1,7 @@
 ---
-title: "PWD Memorandum"
-author: "Your Name"
+subject: "PWD Memorandum"
+from: "Your Name"
+to: "Recipient List"
 date: "The Date"
 output: output_format
 pageheader: "A pageheader for your memo"
