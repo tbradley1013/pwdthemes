@@ -4,7 +4,8 @@ from: "Your Name"
 to: "Recipient List"
 date: "The Date"
 output: pwdthemes::pwd_memo
-pageheader: "A pageheader for your memo"
+pageheader: "INTEROFFICE MEMORANDUM"
+pagesubheader: "A pageheader for your memo"
 footer: true
 ---
 
