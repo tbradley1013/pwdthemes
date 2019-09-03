@@ -31,7 +31,7 @@ This template also creates commands that can be used to create full-page landsca
 \newpage
 \blandscape
 
-# figure
+![](images/logo.png)
 
 \newpage
 \elandscape
