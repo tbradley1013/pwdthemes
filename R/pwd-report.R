@@ -7,6 +7,12 @@ pwd_report <- function(...){
   pdf_document_format("pwd-report", ...)
 }
 
+#' Creates PWD Memo
+#'
+#' @export
+pwd_memo <- function(...){
+  pdf_document_format("pwd-memo")
+}
 
 pdf_document_format <- function(
   format, template = find_resource(format, 'template.tex'), ...
