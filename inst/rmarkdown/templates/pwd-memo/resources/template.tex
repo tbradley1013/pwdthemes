@@ -148,7 +148,7 @@ $endif$
 $if(margin)$
   \usepackage[margin=$margin$]{geometry}
 $else$
-  \usepackage[margin=1in]{geometry}
+  \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
 $endif$
 
 \newcommand{\blandscape}{\begin{landscape}}
@@ -159,7 +159,7 @@ $endif$
 $if(pageheader)$
   \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{$pageheader$}}}
 $else$
-  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{}}}
+  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}}
 $endif$
 $if(logo)$
   \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
@@ -167,6 +167,17 @@ $else$
   \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{images/logo.png}}
 $endif$
 
+$if(headheight)$
+  \setlength{\headheight}{$headheight$}
+$else$
+  \setlength{\headheight}{26pt} % set to minimum height required by fancyhdr package to avoid changing margins
+$endif$
+
+$if(headrule)$
+  \renewcommand{\headrulewidth}{0.4pt}
+$else$
+  \renewcommand{\headrulewidth}{0pt}
+$endif$
 
 $if(footer)$
   \setlength{\wpYoffset}{-12.68cm}
@@ -180,8 +191,8 @@ $endfor$
 
 \begin{document}
 
+% creating the title section of the memo
 \vspace{-40pt}
-%% \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-80pt}
 \setlist[2]{noitemsep}
 \begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{SUBJECT:  }]
@@ -198,7 +209,7 @@ $endfor$
     \item[SUBJECT:] \bfseries{$subject$}
   $endif$
 \end{description}
-\vspace{-10pt}
+\vspace{-5pt}
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-25pt}
 
