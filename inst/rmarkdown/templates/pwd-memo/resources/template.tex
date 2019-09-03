@@ -157,9 +157,17 @@ $endif$
 
 \pagestyle{fancy}
 $if(pageheader)$
-  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{$pageheader$}}}
+  $if(pagesubheader)$
+    \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
+  $else$
+    \fancyhead[L]{\bfseries{\Large{$pageheader$}}}
+  $endif$
 $else$
-  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}}
+  $if(pagesubheader)$
+    \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}\newline\bfseries{\large{$pagesubheader$}}}
+  $else$
+    \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}}
+  $endif$
 $endif$
 $if(logo)$
   \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
@@ -209,7 +217,7 @@ $endfor$
     \item[SUBJECT:] \bfseries{$subject$}
   $endif$
 \end{description}
-\vspace{-5pt}
+\vspace{-10pt}
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-25pt}
 
