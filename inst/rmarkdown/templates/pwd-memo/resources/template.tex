@@ -144,8 +144,12 @@ $endif$
 \usepackage{fancyhdr}
 \usepackage{lscape}
 \usepackage{enumitem}
-\usepackage[margin=1in]{geometry}
 
+$if(margin)$
+  \usepackage[margin=$margin$]{geometry}
+$else$
+  \usepackage[margin=1in]{geometry}
+$endif$
 
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
