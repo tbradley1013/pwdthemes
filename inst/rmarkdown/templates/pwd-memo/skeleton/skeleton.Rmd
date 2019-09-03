@@ -19,3 +19,42 @@ This file is what a user will see when they select your template. Make sure that
 This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
 
 Finally, be sure to remove this message!
+
+
+## R content
+
+The benefit of using Rmarkdown is that you can easily integrate your text and code into a single document which can then be easily rendered into a publication quality document. You can include R code by using "chunks" as follows:
+
+```{r load-libraries}
+library(ggplot2)
+library(dplyr)
+library(pwdthemes)
+```
+
+```{r manipulate-data}
+large_diamonds <- diamonds %>% 
+  filter(carat > 2.2)
+```
+
+You can embed R figures directly into the document. 
+
+```{r plot-large-diamonds, fig.width=8, fig.height=4}
+large_diamonds %>% 
+  ggplot(aes(price, carat, color = cut)) + 
+  geom_point() + 
+  theme_bw() + 
+  labs(
+    title = "Diamond Carat vs Price",
+    subtitle = "Only Diamonds with carat > 2.2 shown"
+  ) + 
+  scale_color_pwd("dark")
+
+```
+
+In addition to embedding R figures and code, you can also embed images in the document:
+
+![](images/logo.png)
+
+## More
+
+To see more ways to use Rmarkdwon and further capabilities, check out the [Rmarkdown website](https://rmarkdown.rstudio.com/index.html) and [free online book](https://bookdown.org/yihui/rmarkdown/)
