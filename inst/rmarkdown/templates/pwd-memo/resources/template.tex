@@ -183,7 +183,7 @@ $endfor$
     \item[FROM:] $from$
   $endif$
   $if(to)$
-    \item[TO:] $to$
+    \item[TO:] $for(to)$$to$ $endfor$
   $endif$
   $if(date)$
     \item[DATE:] $date$
