@@ -135,3 +135,28 @@ $endif$
 %%% Use protect on footnotes to avoid problems with footnotes in titles
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
+
+%% Things below here are editted
+%%-------------------------------
+\usepackage{graphicx} % for logo
+\usepackage{titling} % for subtitle
+\usepackage{wallpaper} % for footer logo
+\usepackage{fancyhdr}
+\usepackage{lscape}
+
+
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+
+\pagestyle{fancy}
+$if(pageheader)$
+  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{$pageheader$}}}
+$else$
+  \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{}}}
+$endif$
+$if(logo)$
+  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
+$else$
+  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{images/water-logo.png}}
+$endif$
