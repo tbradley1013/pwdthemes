@@ -3,7 +3,7 @@ subject: "PWD Memorandum"
 from: "Your Name"
 to: "Recipient List"
 date: "The Date"
-output: output_format
+output: pwdthemes::pwd_memo
 pageheader: "A pageheader for your memo"
 footer: true
 ---
