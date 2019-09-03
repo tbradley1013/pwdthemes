@@ -72,7 +72,7 @@ library(patchwork)
 
 ``` r
 large_diamonds <- diamonds %>% 
-  filter(carat > 2)
+  filter(carat > 2.2)
 
 pc <- ggplot(large_diamonds, aes(price, carat, color = cut)) + 
   geom_point() + 
