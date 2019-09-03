@@ -156,9 +156,9 @@ $else$
   \fancyhead[L]{\bfseries{\Large{INTEROFFICE MEMORANDUM}}\newline\bfseries{\large{}}}
 $endif$
 $if(logo)$
-  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
+  \fancyhead[R]{\includegraphics{$logo$}}
 $else$
-  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{images/water-logo.png}}
+  \fancyhead[R]{\includegraphics{images/water-logo.png}}
 $endif$
 
 
@@ -166,3 +166,58 @@ $if(footer)$
   \setlength{\wpYoffset}{-12.68cm}
   \CenterWallPaper{0.6}{images/footer.png}
 $endif$
+
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+
+\vspace{-40pt}
+%% \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\vspace{-80pt}
+\setlist[2]{noitemsep}
+\begin{description}[leftmargin=!,itemsep=-1ex,labelwidth=\widthof{Subject:  }]
+  $if(from)$
+    \item[FROM:] $from$
+  $endif$
+  $if(to)$
+    \item[TO:] $to$
+  $endif$
+  $if(date)$
+    \item[DATE:] $date$
+  $endif$
+  $if(subject)$
+    \item[RE:] \bfseries{$subject$}
+  $endif$
+\end{description}
+\vspace{-20pt}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\vspace{-25pt}
+
+
+$body$
+
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
