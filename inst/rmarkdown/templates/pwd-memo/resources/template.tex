@@ -205,10 +205,10 @@ $endfor$
 \setlist[2]{noitemsep}
 \begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{SUBJECT:  }]
   $if(from)$
-    \item[FROM:] $from$
+    \item[FROM:] $for(from)$$from$$sep$, $endfor$
   $endif$
   $if(to)$
-    \item[TO:] $for(to)$$to$ $endfor$
+    \item[TO:] $for(to)$$to$$sep$, $endfor$
   $endif$
   $if(date)$
     \item[DATE:] $date$
