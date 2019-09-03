@@ -1,7 +1,9 @@
 ---
 subject: "PWD Memorandum"
 from: "Your Name"
-to: "Recipient List"
+to: 
+  - "Person One"
+  - "Person Two"
 date: "The Date"
 output: pwdthemes::pwd_memo
 pageheader: "INTEROFFICE MEMORANDUM"
