@@ -144,6 +144,7 @@ $endif$
 \usepackage{fancyhdr}
 \usepackage{lscape}
 \usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
 
 
 \newcommand{\blandscape}{\begin{landscape}}
@@ -179,7 +180,7 @@ $endfor$
 %% \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \vspace{-80pt}
 \setlist[2]{noitemsep}
-\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{Subject:  }]
+\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{SUBJECT:  }]
   $if(from)$
     \item[FROM:] $from$
   $endif$
@@ -190,7 +191,7 @@ $endfor$
     \item[DATE:] $date$
   $endif$
   $if(subject)$
-    \item[RE:] \bfseries{$subject$}
+    \item[SUBJECT:] \bfseries{$subject$}
   $endif$
 \end{description}
 \vspace{-10pt}
