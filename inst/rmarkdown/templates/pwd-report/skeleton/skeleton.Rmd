@@ -31,7 +31,9 @@ This template also creates commands that can be used to create full-page landsca
 \newpage
 \blandscape
 
-![](images/logo.png)
+```{r, fig.align="center", echo = FALSE}
+knitr::include_graphics("images/logo.png")
+```
 
 \newpage
 \elandscape
