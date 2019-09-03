@@ -17,13 +17,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Adding an RMarkdown Template
+## PWD Memo RMarkdown Template
 
-This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+This template is designed to create a standard memo template that fits with PWD styles. This style is likely better for shorter reports that are to be distributed throughout multiple groups within PWD. The goal of this template is to make it easy to create reports that integrate text and data without you having to worry about custom LaTeX to be able to make the report look like a memo. 
 
-This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+This template includes two images, similar to the PWD Report tempalte. These images will be in the `images/` subdirectory of the directory that contains the Rmarkdown file. The `footer.png` file is the same as the PWD Report Tempalte and is the footer that is included on all PWD documents. If you do not want to include this image in your memo, than you can set `footer: false` in the YAML of your report. The other image is a PWD logo. This is a logo without the commissioner's name, so that it can fit more easily in the header of the document. 
 
-Finally, be sure to remove this message!
+There are several yaml options that will allow for users to easily change the look and feel of the memo. If you want to 
 
 
 ## R content
