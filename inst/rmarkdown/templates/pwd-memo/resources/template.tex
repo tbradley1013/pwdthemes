@@ -46,9 +46,6 @@ $endif$
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
 $if(lang)$
 \ifxetex
   \usepackage{polyglossia}
@@ -144,11 +141,17 @@ $endif$
 \usepackage{fancyhdr}
 \usepackage{lscape}
 \usepackage{enumitem}
+\usepackage[utf8]{inputenc}
 
-$if(margin)$
-  \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
+
+$if(geometry)$
+  \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $else$
-  \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
+  $if(margin)$
+    \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
+  $else$
+    \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
+  $endif$
 $endif$
 
 \newcommand{\blandscape}{\begin{landscape}}
@@ -224,23 +227,39 @@ $endfor$
 
 $body$
 
-$if(natbib)$
-$if(biblio-files)$
-$if(biblio-title)$
-$if(book-class)$
-\renewcommand\bibname{$biblio-title$}
-$else$
-\renewcommand\refname{$biblio-title$}
-$endif$
-$endif$
-\bibliography{$biblio-files$}
+$if(signiture)$
+  \begin{flushright}
+  $if(valediction)$
+    $valediction$, \\[2in]
+  $else$
+    Sincerely, \\[2in]
+  $endif$
 
+  \large{$for(signiture)$$signiture$ \\ $endfor$}
+  \end{flushright}
 $endif$
-$endif$
-$if(biblatex)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
+$if(bibliography)$
+\printbibliography[title="References"]
 $endif$
+
+% $if(natbib)$
+% $if(biblio-files)$
+% $if(biblio-title)$
+% $if(book-class)$
+% \renewcommand\bibname{$biblio-title$}
+% $else$
+% \renewcommand\refname{$biblio-title$}
+% $endif$
+% $endif$
+% \bibliography{$biblio-files$}
+%
+% $endif$
+% $endif$
+% $if(biblatex)$
+% \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+%
+% $endif$
 $for(include-after)$
 $include-after$
 
