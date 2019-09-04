@@ -1,6 +1,11 @@
 ---
-title: "Template Title"
-author: "Your Name"
+subject: "Meeting Subject"
+organizer: "Your Name"
+invitees:
+  - "Person One"
+  - "Person Two"
+  - "Person Three"
+location: "Jefferson Tower, PWD McCarty Conference Room"
 date: "The Date"
 output: output_format
 ---
