@@ -152,13 +152,24 @@ $else$
   $if(margin)$
     \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
   $else$
-    \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
+    \usepackage[hmargin=1in, vmargin={1in, 2in}]{geometry}
   $endif$
 $endif$
 
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
 \def\tightlist{}
+
+\fancypagestyle{firstpage}
+{
+  $if(logo)$
+    \fancyhead[C]{\includegraphics{$logo$}}
+  $else$
+    \fancyhead[c]{\includegraphics{images/logo-tmp.png}}
+  $endif$
+  \setlength{\headheight}{71pt}
+  \renewcommand{\headrulewidth}{0pt}
+}
 
 $if(footer)$
   \setlength{\wpYoffset}{-12.68cm}
@@ -173,7 +184,7 @@ $endfor$
 
 
 \begin{document}
-
+\thispagestyle{firstpage}
 $if(subject)$
 \begin{center}
   \bfseries{\LARGE{$subject$}}
