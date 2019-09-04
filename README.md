@@ -35,6 +35,34 @@ devtools::install_github("tbradley1013/pwdthemes")
 order to install this package using either `install.packages` or
 `install_github` methods**
 
+## RMarkdown Templates
+
+This package provides several Rmarkdown template. These templates will
+allow for users to easily create branded PWD documents to share easily.
+This will hopefully reduce the amount of time and headache that is spent
+trying to create LaTeX styles for reports that may be preventing people
+from embracing Rmarkdown for writing their reports. Please note that
+these templates are not approved by public affairs, so please consult
+your supervisor before using these templates to share reports outside of
+the department. The templates that are included with this package are:
+
+  - **PWD Report** - This template creates a report document with a
+    standalone title page, custom page headers and PWD logos. This
+    template is great for any kind of report that you may be writing for
+    PWD.
+  - **PWD Memo** - This template creates a interoffice memo with the
+    customary memo header. This will allow you to easily integrate any R
+    code, simple or complex, into a memo that can be distributed
+    throughout the department.
+  - **PWD Meeting Agenda** - This template will allow users to create
+    meeting notes with a custom header. **not implemented yet**
+
+### PWD Report
+
+### PWD Memo
+
+### PWD Meeting Agenda
+
 ## Palettes and `ggplot2` scales
 
 This package provides functions that allow you to easily add PWD
