@@ -227,39 +227,42 @@ $endfor$
 
 $body$
 
-$if(signiture)$
-  \begin{flushright}
-  $if(valediction)$
-    $valediction$, \\[2in]
-  $else$
-    Sincerely, \\[2in]
-  $endif$
-
-  \large{$for(signiture)$$signiture$ \\ $endfor$}
-  \end{flushright}
-$endif$
-
-$if(bibliography)$
-\printbibliography[title="References"]
-$endif$
-
-% $if(natbib)$
-% $if(biblio-files)$
-% $if(biblio-title)$
-% $if(book-class)$
-% \renewcommand\bibname{$biblio-title$}
-% $else$
-% \renewcommand\refname{$biblio-title$}
+%% would like to add signiture, but can't get it to play well with bibliography
+% $if(signiture)$
+%   \begin{flushright}
+%   $if(valediction)$
+%     $valediction$, \\[2in]
+%   $else$
+%     Sincerely, \\[2in]
+%   $endif$
+%
+%   \large{$for(signiture)$$signiture$ \\ $endfor$}
+%   \end{flushright}
 % $endif$
-% $endif$
+%
+% $if(bibliography)$
 % \bibliography{$biblio-files$}
-%
+% %\addbibresource{$bibliography$}
+% \printbibliography[title=References]
 % $endif$
-% $endif$
-% $if(biblatex)$
-% \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-%
-% $endif$
+
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
 $for(include-after)$
 $include-after$
 
