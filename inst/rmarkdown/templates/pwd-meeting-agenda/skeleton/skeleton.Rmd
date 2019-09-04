@@ -8,6 +8,7 @@ invitees:
 location: "Jefferson Tower, PWD McCarty Conference Room"
 date: "The Date"
 output: pwdthemes::pwd_meeting_agenda
+footer: true
 ---
 
 ```{r setup, include=FALSE}
