@@ -14,6 +14,13 @@ pwd_memo <- function(...){
   pdf_document_format("pwd-memo")
 }
 
+#' Creates PWD Meeting Agenda
+#'
+#' @export
+pwd_meeting_agenda <- function(...){
+  pdf_document_format("pwd-meeting-agenda")
+}
+
 pdf_document_format <- function(
   format, template = find_resource(format, 'template.tex'), ...
 ) {
