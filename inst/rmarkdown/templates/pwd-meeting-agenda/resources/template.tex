@@ -152,7 +152,7 @@ $else$
   $if(margin)$
     \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
   $else$
-    \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
+    \usepackage[hmargin=1in, vmargin={0.5in, 1.5in}]{geometry}
   $endif$
 $endif$
 
@@ -165,11 +165,13 @@ $endif$
   $if(logo)$
     \fancyhead[C]{\includegraphics{$logo$}}
   $else$
-    \fancyhead[c]{\includegraphics{images/logo.png}}
+    \fancyhead[c]{\includegraphics{images/WATER_LargeBlue_2016.png}}
   $endif$
   \fancyfoot[RO, RE]{\thepage}
   \setlength{\headheight}{71pt}
+  \setlength{\footheight}{60pt}
   \renewcommand{\headrulewidth}{0pt}
+
 }
 
 $if(footer)$
@@ -177,11 +179,19 @@ $if(footer)$
   \CenterWallPaper{0.6}{images/footer.png}
 $endif$
 
-\pagestyle{fancy}
-\fancyhead[L]{}
-\fancyfoot{}
-\fancyfoot[RO, RE]{\thepage}
-\renewcommand{\footrulewidth}{0pt}
+% \pagestyle{fancy}
+% \fancyhead{}
+% $if(logo)$
+%   \fancyhead[C]{\includegraphics{$logo$}}
+% $else$
+%   \fancyhead[c]{\includegraphics{images/logo.png}}
+% $endif$
+% \setlength{\headheight}{71pt}
+% % \fancyhead[L]{}
+% \fancyfoot{}
+% \fancyfoot[RO, RE]{\thepage}
+% \renewcommand{\footrulewidth}{0pt}
+% \renewcommand{\headrulewidth}{0pt}
 
 $for(header-includes)$
 $header-includes$
@@ -190,7 +200,18 @@ $endfor$
 
 \begin{document}
 % \pagenumbering{gobble}
-\thispagestyle{firstpage}
+% \thispagestyle{firstpage}
+
+\vspace*{-1in}
+\begin{center}
+\LARGE
+$if(logo)$
+  \includegraphics{$logo$}\\[\bigskipamount]
+$else$
+  \includegraphics[scale=0.33]{images/WATER_LargeBlue_2016.png}\\[\bigskipamount]
+$endif$
+\end{center}
+
 $if(subject)$
 \begin{center}
   \bfseries{\LARGE{$subject$}}
