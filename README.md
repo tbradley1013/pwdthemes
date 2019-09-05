@@ -55,7 +55,7 @@ the department. The templates that are included with this package are:
     code, simple or complex, into a memo that can be distributed
     throughout the department.
   - **PWD Meeting Agenda** - This template will allow users to create
-    meeting notes with a custom header. **not implemented yet**
+    meeting notes with a custom header.
 
 ### PWD Report
 

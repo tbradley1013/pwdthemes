@@ -45,7 +45,7 @@ This package provides several Rmarkdown template. These templates will allow for
 
   * **PWD Report** - This template creates a report document with a standalone title page, custom page headers and PWD logos. This template is great for any kind of report that you may be writing for PWD. 
   * **PWD Memo** - This template creates a interoffice memo with the customary memo header. This will allow you to easily integrate any R code, simple or complex, into a memo that can be distributed throughout the department.
-  * **PWD Meeting Agenda** - This template will allow users to create meeting notes with a custom header. **not implemented yet**
+  * **PWD Meeting Agenda** - This template will allow users to create meeting notes with a custom header. 
   
 ### PWD Report
 
