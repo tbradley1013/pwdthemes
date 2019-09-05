@@ -152,7 +152,7 @@ $else$
   $if(margin)$
     \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
   $else$
-    \usepackage[hmargin=1in, vmargin={1in, 2in}]{geometry}
+    \usepackage[hmargin=1in, vmargin={1in, 1.5in}]{geometry}
   $endif$
 $endif$
 
@@ -167,6 +167,7 @@ $endif$
   $else$
     \fancyhead[c]{\includegraphics{images/logo.png}}
   $endif$
+  \fancyfoot[RO, RE]{\thepage}
   \setlength{\headheight}{71pt}
   \renewcommand{\headrulewidth}{0pt}
 }
@@ -176,7 +177,11 @@ $if(footer)$
   \CenterWallPaper{0.6}{images/footer.png}
 $endif$
 
-
+\pagestyle{fancy}
+\fancyhead[L]{}
+\fancyfoot{}
+\fancyfoot[RO, RE]{\thepage}
+\renewcommand{\footrulewidth}{0pt}
 
 $for(header-includes)$
 $header-includes$
@@ -184,6 +189,7 @@ $endfor$
 
 
 \begin{document}
+% \pagenumbering{gobble}
 \thispagestyle{firstpage}
 $if(subject)$
 \begin{center}
