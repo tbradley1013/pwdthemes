@@ -143,6 +143,7 @@ $endif$
 \usepackage{lscape}
 \usepackage{enumitem}
 \usepackage[utf8]{inputenc}
+\usepackage{xcolor}
 
 
 $if(geometry)$
@@ -157,32 +158,42 @@ $endif$
 
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
+\newcommand{\doublerule}[1][.4pt]{%
+  \noindent
+  \makebox[0pt][l]{\rule[.7ex]{\linewidth}{#1}}%
+  \rule[.3ex]{\linewidth}{#1}
+}
 \def\tightlist{}
 
 \pagestyle{fancy}
-$if(pageheader)$
-  $if(pagesubheader)$
-    \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
-  $else$
-    \fancyhead[L]{\bfseries{\Large{$pageheader$}}}
-  $endif$
-$else$
-  $if(pagesubheader)$
-    \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}\newline\bfseries{\large{$pagesubheader$}}}
-  $else$
-    \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}}
-  $endif$
-$endif$
-$if(logo)$
-  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
-$else$
-  \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{images/logo.png}}
-$endif$
+\fancyhead{}
+\fancyhead[L]{}
+\fancyhead[C]{\includegraphics[width=150px, height=66px]{images/logo.png} \\ \small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}}
+% $if(pageheader)$
+%   $if(pagesubheader)$
+%     \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
+%   $else$
+%     \fancyhead[L]{\bfseries{\Large{$pageheader$}}}
+%   $endif$
+% $else$
+%   $if(pagesubheader)$
+%     \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}\newline\bfseries{\large{$pagesubheader$}}}
+%   $else$
+%     \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}}
+%   $endif$
+% $endif$
+% $if(logo)$
+%   \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
+% $else$
+%   \fancyhead[R]{\includegraphics[width=165px, height=72.6px]{images/logo.png}}
+% $endif$
+
+% \newline\small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}
 
 $if(headheight)$
   \setlength{\headheight}{$headheight$}
 $else$
-  \setlength{\headheight}{26pt} % set to minimum height required by fancyhdr package to avoid changing margins
+  \setlength{\headheight}{81pt} % set to minimum height required by fancyhdr package to avoid changing margins
 $endif$
 
 $if(headrule)$
@@ -206,6 +217,9 @@ $endfor$
 % creating the title section of the memo
 \vspace{-40pt}
 \vspace{-80pt}
+\begin{center}
+\textbf{\LARGE{MEMORANDUM}}
+\end{center}
 \setlist[2]{noitemsep}
 \begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{\textbf{Subject:}  }]
   $if(to)$
@@ -222,7 +236,7 @@ $endfor$
   $endif$
 \end{description}
 \vspace{-10pt}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\noindent\makebox[\linewidth]{\doublerule}
 \vspace{-25pt}
 
 
