@@ -144,6 +144,7 @@ $endif$
 \usepackage{lscape}
 \usepackage{enumitem}
 \usepackage[utf8]{inputenc}
+\usepackage{xcolor}
 
 
 $if(geometry)$
@@ -187,14 +188,16 @@ $endfor$
 
 \begin{document}
 
-\vspace*{-1.25in}
+\vspace*{-1in}
 \begin{center}
 \LARGE
 $if(logo)$
   \includegraphics{$logo$}\\[\bigskipamount]
 $else$
-  \includegraphics[scale=0.33]{images/logo.png}\\[\bigskipamount]
+  \includegraphics[scale=0.3]{images/logo.png}\\[\bigskipamount]
 $endif$
+\vspace*{-0.15in}
+\small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}
 \end{center}
 
 $if(subject)$
@@ -204,7 +207,7 @@ $if(subject)$
 $endif$
 
 \setlist[2]{noitemsep}
-\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{LOCATION:  }]
+\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{\textbf{ORGANIZER:}  }]
   $if(organizer)$
     \item[ORGANIZER:] $for(organizer)$$organizer$$sep$, $endfor$
   $endif$
