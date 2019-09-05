@@ -150,9 +150,9 @@ $if(geometry)$
   \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $else$
   $if(margin)$
-    \usepackage[hmargin=$margin$, vmargin{1in, 1.5in}{geometry}
+    \usepackage[hmargin=$margin$, vmargin{1in, 1.25in}{geometry}
   $else$
-    \usepackage[hmargin=1in, vmargin={0.5in, 1.5in}]{geometry}
+    \usepackage[hmargin=1in, vmargin={1in, 1.25in}]{geometry}
   $endif$
 $endif$
 
@@ -187,7 +187,7 @@ $endfor$
 
 \begin{document}
 
-\vspace*{-1in}
+\vspace*{-1.25in}
 \begin{center}
 \LARGE
 $if(logo)$
