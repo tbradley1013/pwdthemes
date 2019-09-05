@@ -160,19 +160,6 @@ $endif$
 \newcommand{\elandscape}{\end{landscape}}
 \def\tightlist{}
 
-\fancypagestyle{firstpage}
-{
-  $if(logo)$
-    \fancyhead[C]{\includegraphics{$logo$}}
-  $else$
-    \fancyhead[c]{\includegraphics{images/WATER_LargeBlue_2016.png}}
-  $endif$
-  \fancyfoot[RO, RE]{\thepage}
-  \setlength{\headheight}{71pt}
-  \setlength{\footheight}{60pt}
-  \renewcommand{\headrulewidth}{0pt}
-
-}
 
 $if(footer)$
   \setlength{\wpYoffset}{-12.68cm}
@@ -199,8 +186,6 @@ $endfor$
 
 
 \begin{document}
-% \pagenumbering{gobble}
-% \thispagestyle{firstpage}
 
 \vspace*{-1in}
 \begin{center}
@@ -208,7 +193,7 @@ $endfor$
 $if(logo)$
   \includegraphics{$logo$}\\[\bigskipamount]
 $else$
-  \includegraphics[scale=0.33]{images/WATER_LargeBlue_2016.png}\\[\bigskipamount]
+  \includegraphics[scale=0.33]{images/logo.png}\\[\bigskipamount]
 $endif$
 \end{center}
 
