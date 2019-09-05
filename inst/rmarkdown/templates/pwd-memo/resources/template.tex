@@ -207,18 +207,18 @@ $endfor$
 \vspace{-40pt}
 \vspace{-80pt}
 \setlist[2]{noitemsep}
-\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{\textbf{SUBJECT:}  }]
-  $if(from)$
-    \item[FROM:] $for(from)$$from$$sep$, $endfor$
-  $endif$
+\begin{description}[leftmargin=!,itemsep=3pt,labelwidth=\widthof{\textbf{Subject:}  }]
   $if(to)$
-    \item[TO:] $for(to)$$to$$sep$, $endfor$
+    \item[To:] $for(to)$$to$$sep$, $endfor$
+  $endif$
+  $if(from)$
+    \item[From:] $for(from)$$from$$sep$, $endfor$
   $endif$
   $if(date)$
-    \item[DATE:] $date$
+    \item[Date:] $date$
   $endif$
   $if(subject)$
-    \item[SUBJECT:] \bfseries{$subject$}
+    \item[Subject:] \bfseries{$subject$}
   $endif$
 \end{description}
 \vspace{-10pt}
