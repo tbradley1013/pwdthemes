@@ -121,11 +121,20 @@ $if(geometry)$
   \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $else$
   $if(margin)$
-    \usepackage[hmargin=$margin$, vmargin{1in, 2.25in}{geometry}
+    \usepackage[hmargin=$margin$, vmargin{1in, 2in}{geometry}
   $else$
-    \usepackage[hmargin=1in, vmargin={1in, 2.25in}]{geometry}
+    \usepackage[hmargin=1in, vmargin={1in, 2in}]{geometry}
   $endif$
 $endif$
+
+\newcommand{\pwdfooter}{%
+  % \begin{center}
+  \textcolor[HTML]{0070C0}{
+  \large{Philadelphia Water Department | 1101 Market Street | Philadelphia, PA 19107-2994 \\
+  \textit{An Equal Opportunity Employer}}
+  }
+  % \end{center}
+}
 
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
@@ -140,6 +149,9 @@ $endif$
 \fancyhead{}
 \fancyhead[L]{}
 \fancyhead[C]{\includegraphics[width=150px, height=66px]{images/logo.png} \\ \large{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}}
+\fancyfoot{}
+\fancyfoot[C]{\pwdfooter}
+\fancyfoot[R]{\thepage}
 % $if(pageheader)$
 %   $if(pagesubheader)$
 %     \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
@@ -173,10 +185,10 @@ $else$
   \renewcommand{\headrulewidth}{0pt}
 $endif$
 
-$if(footer)$
-  \setlength{\wpYoffset}{-12.68cm}
-  \CenterWallPaper{0.6}{images/footer.png}
-$endif$
+% $if(footer)$
+%   \setlength{\wpYoffset}{-12.68cm}
+%   \CenterWallPaper{0.6}{images/footer.png}
+% $endif$
 
 
 $for(header-includes)$
