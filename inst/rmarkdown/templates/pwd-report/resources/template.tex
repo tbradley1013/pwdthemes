@@ -112,6 +112,9 @@ $endif$
 \usepackage{wallpaper} % for footer logo
 \usepackage{fancyhdr}
 \usepackage{lscape}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
 
 % Setting the font to Calibri
 \usepackage{fontspec}
@@ -120,6 +123,14 @@ $endif$
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
 \def\tightlist{}
+
+% defining a custom PWD footer command
+\newcommand{\pwdfooter}{%
+  \textcolor[HTML]{0070C0}{
+    \large{Philadelphia Water Department | 1101 Market Street | Philadelphia, PA 19107-2994 \\
+    \textit{An Equal Opportunity Employer}}
+  }
+}
 
 %% fancy headers
 \pagestyle{fancy}
@@ -131,6 +142,7 @@ $else$
   \fancyhead[RO, RE]{\textbf{}}
 $endif$
 \fancyfoot{}
+\fancyfoot[C]{\pwdfooter}
 \fancyfoot[RO, RE]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -138,13 +150,13 @@ $endif$
 
 \setlength{\droptitle}{-2em}
 
-$if(footer)$
-  \setlength{\wpYoffset}{-12.68cm}
-  \CenterWallPaper{0.6}{images/footer.png}
-$endif$
+% $if(footer)$
+%   \setlength{\wpYoffset}{-12.68cm}
+%   \CenterWallPaper{0.6}{images/footer.png}
+% $endif$
 
 $if(title)$
-  \title{$title$}
+  \title{\textbf{\LARGE{$title$}}}
 $else$
   \title{}
 $endif$
@@ -164,11 +176,8 @@ $endif$
 \pretitle{
   \begin{center}
   \LARGE
-  $if(logo)$
-    \includegraphics{$logo$}\\[\bigskipamount]
-  $else$
-    \includegraphics{images/logo.png}\\[\bigskipamount]
-  $endif$
+  \includegraphics[width=150px, height=66px]{images/logo.png} \\ \large{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}
+  \vspace*{1in}
 
 }
 \posttitle{
