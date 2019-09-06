@@ -152,26 +152,7 @@ $endif$
 \fancyfoot{}
 \fancyfoot[C]{\pwdfooter}
 \fancyfoot[R]{\thepage}
-% $if(pageheader)$
-%   $if(pagesubheader)$
-%     \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
-%   $else$
-%     \fancyhead[L]{\bfseries{\Large{$pageheader$}}}
-%   $endif$
-% $else$
-%   $if(pagesubheader)$
-%     \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}\newline\bfseries{\large{$pagesubheader$}}}
-%   $else$
-%     \fancyhead[L]{\bfseries{\Large{MEMORANDUM}}}
-%   $endif$
-% $endif$
-% $if(logo)$
-%   \fancyhead[R]{\includegraphics[width=1.75cm,height=1.25cm]{$logo$}}
-% $else$
-%   \fancyhead[R]{\includegraphics[width=165px, height=72.6px]{images/logo.png}}
-% $endif$
 
-% \newline\small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}
 
 $if(headheight)$
   \setlength{\headheight}{$headheight$}
@@ -184,11 +165,6 @@ $if(headrule)$
 $else$
   \renewcommand{\headrulewidth}{0pt}
 $endif$
-
-% $if(footer)$
-%   \setlength{\wpYoffset}{-12.68cm}
-%   \CenterWallPaper{0.6}{images/footer.png}
-% $endif$
 
 
 $for(header-includes)$
