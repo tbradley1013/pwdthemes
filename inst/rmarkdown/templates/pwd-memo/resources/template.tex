@@ -152,19 +152,8 @@ $endif$
 \fancyfoot{}
 \fancyfoot[C]{\pwdfooter}
 \fancyfoot[R]{\thepage}
-
-
-$if(headheight)$
-  \setlength{\headheight}{$headheight$}
-$else$
-  \setlength{\headheight}{81pt} % set to minimum height required by fancyhdr package to avoid changing margins
-$endif$
-
-$if(headrule)$
-  \renewcommand{\headrulewidth}{0.4pt}
-$else$
-  \renewcommand{\headrulewidth}{0pt}
-$endif$
+\setlength{\headheight}{81pt} % set to minimum height required by fancyhdr package to avoid changing margins
+\renewcommand{\headrulewidth}{0pt}
 
 
 $for(header-includes)$
