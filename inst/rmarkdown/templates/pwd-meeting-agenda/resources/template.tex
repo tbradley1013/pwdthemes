@@ -150,11 +150,6 @@ $endif$
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{85pt}
 
-% $if(footer)$
-%   \setlength{\wpYoffset}{-12.68cm}
-%   \CenterWallPaper{0.6}{images/footer.png}
-% $endif$
-
 
 $for(header-includes)$
 $header-includes$
@@ -163,17 +158,6 @@ $endfor$
 
 \begin{document}
 
-% \vspace*{-1in}
-% \begin{center}
-% \LARGE
-% $if(logo)$
-%   \includegraphics{$logo$}\\[\bigskipamount]
-% $else$
-%   \includegraphics[scale=0.3]{images/logo.png}\\[\bigskipamount]
-% $endif$
-% \vspace*{-0.15in}
-% \small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}
-% \end{center}
 
 $if(subject)$
 \begin{center}
