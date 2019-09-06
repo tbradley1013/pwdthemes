@@ -114,6 +114,7 @@ $endif$
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 
+% Setting the font to Calibri
 \usepackage{fontspec}
 \setmainfont{Calibri}
 
@@ -127,13 +128,12 @@ $else$
   $endif$
 $endif$
 
+% defining a custom PWD footer command
 \newcommand{\pwdfooter}{%
-  % \begin{center}
   \textcolor[HTML]{0070C0}{
-  \large{Philadelphia Water Department | 1101 Market Street | Philadelphia, PA 19107-2994 \\
-  \textit{An Equal Opportunity Employer}}
+    \large{Philadelphia Water Department | 1101 Market Street | Philadelphia, PA 19107-2994 \\
+    \textit{An Equal Opportunity Employer}}
   }
-  % \end{center}
 }
 
 \newcommand{\blandscape}{\begin{landscape}}
