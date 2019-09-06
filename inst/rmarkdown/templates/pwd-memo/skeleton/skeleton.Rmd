@@ -6,7 +6,6 @@ to:
   - "Person Two"
 date: "The Date"
 output: pwdthemes::pwd_memo
-footer: true
 ---
 
 ```{r setup, include=FALSE}
@@ -30,8 +29,7 @@ There are several yaml options that will allow for users to easily change the lo
   * **date**: Date of the memo
   * **subject**: The subject of the memo
   * **margin**: set the hosrizontal margin (default = 1in)
-  * **headheight**: set the margin between the header and the text at the top of the page (default = 26pt - NOTE: if this is decreased it may cause issue with the positioning of the page numbers)
-  * **headrule**: whether to include a horizontal rule between the header and the text (default = false)
+
 
 This template also creates commands that can be used to create full-page landscape figures. You would implement it by doing the following:
 
