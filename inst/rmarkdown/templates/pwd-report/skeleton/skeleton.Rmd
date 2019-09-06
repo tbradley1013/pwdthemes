@@ -1,5 +1,5 @@
 ---
-title: "PWD Report"
+title: "PWD Report Title"
 subtitle: "A report template for the Philadelphia Water Department"
 author: "Your Name"
 date: "The Date"
