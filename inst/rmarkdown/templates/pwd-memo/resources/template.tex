@@ -12,34 +12,34 @@ $endif$
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-$if(euro)$
-  \usepackage{eurosym}
-$endif$
-\else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-    \usepackage{xltxtra,xunicode}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \newcommand{\euro}{€}
-$if(mainfont)$
-    \setmainfont{$mainfont$}
-$endif$
-$if(sansfont)$
-    \setsansfont{$sansfont$}
-$endif$
-$if(monofont)$
-    \setmonofont[Mapping=tex-ansi]{$monofont$}
-$endif$
-$if(mathfont)$
-    \setmathfont(Digits,Latin,Greek){$mathfont$}
-$endif$
-\fi
+% \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+%   \usepackage[T1]{fontenc}
+%   \usepackage[utf8]{inputenc}
+% $if(euro)$
+%   \usepackage{eurosym}
+% $endif$
+% \else % if luatex or xelatex
+%   \ifxetex
+%     \usepackage{mathspec}
+%     \usepackage{xltxtra,xunicode}
+%   \else
+%     \usepackage{fontspec}
+%   \fi
+%   \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%   \newcommand{\euro}{€}
+% $if(mainfont)$
+%     \setmainfont{$mainfont$}
+% $endif$
+% $if(sansfont)$
+%     \setsansfont{$sansfont$}
+% $endif$
+% $if(monofont)$
+%     \setmonofont[Mapping=tex-ansi]{$monofont$}
+% $endif$
+% $if(mathfont)$
+%     \setmathfont(Digits,Latin,Greek){$mathfont$}
+% $endif$
+% \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
@@ -145,6 +145,8 @@ $endif$
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 
+\usepackage{fontspec}
+\setmainfont{Calibri}
 
 $if(geometry)$
   \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
@@ -168,7 +170,7 @@ $endif$
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[L]{}
-\fancyhead[C]{\includegraphics[width=150px, height=66px]{images/logo.png} \\ \small{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}}
+\fancyhead[C]{\includegraphics[width=150px, height=66px]{images/logo.png} \\ \large{\textcolor[HTML]{0070C0}{Randy E. Hayman, Water Commissioner}}}
 % $if(pageheader)$
 %   $if(pagesubheader)$
 %     \fancyhead[L]{\bfseries{\Large{$pageheader$}}\newline\bfseries{\large{$pagesubheader$}}}
@@ -213,10 +215,12 @@ $header-includes$
 $endfor$
 
 \begin{document}
+% options(tikzDefaultEngine='xetex')
+
 
 % creating the title section of the memo
-\vspace{-40pt}
-\vspace{-80pt}
+% \vspace{-40pt}
+% \vspace{-80pt}
 \begin{center}
 \textbf{\LARGE{MEMORANDUM}}
 \end{center}
