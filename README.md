@@ -67,7 +67,11 @@ the department. The templates that are included with this package are:
 
 ### PWD Memo
 
+![](man/figures/README-pwd-memo-ex.png)
+
 ### PWD Meeting Agenda
+
+![](man/figures/README-pwd-meeting-ex.png)
 
 ## Palettes and `ggplot2` scales
 
