@@ -59,6 +59,8 @@ the department. The templates that are included with this package are:
 
 ### PWD Report
 
+<img src="man/figures/README-pwd-report-ex.png" align="center" >
+
 ### PWD Memo
 
 ### PWD Meeting Agenda

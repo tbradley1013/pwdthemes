@@ -49,6 +49,8 @@ This package provides several Rmarkdown template. These templates will allow for
   
 ### PWD Report
 
+<img src="man/figures/README-pwd-report-ex.png" align="center" >
+
 ### PWD Memo
 
 ### PWD Meeting Agenda
