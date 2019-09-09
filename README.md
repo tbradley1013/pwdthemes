@@ -59,7 +59,11 @@ the department. The templates that are included with this package are:
 
 ### PWD Report
 
-<img src="man/figures/README-pwd-report-ex.png" align="center" >
+<center>
+
+![](man/figures/README-pwd-report-ex.png)
+
+</center>
 
 ### PWD Memo
 
