@@ -131,3 +131,14 @@ font_pub_medium <- "Public Sans Medium"
 #' @description font_pub_semibold == "Public Sans SemiBold"
 #' @export
 font_pub_semibold <- "Public Sans SemiBold"
+
+
+#' @rdname Calibri
+#' @description font_cal == "Calibri"
+#' @export
+font_cal <- "Calibri"
+
+#' @rdname Calibri
+#' @description font_cal_light == "Calibri Light"
+#' @export
+font_cal_light <- "Calibri Light"
