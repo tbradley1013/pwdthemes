@@ -15,5 +15,6 @@ Imports:
     grDevices,
     stringr,
     ggplot2,
-    magrittr
+    magrittr,
+    extrafont
 RoxygenNote: 6.1.1
