@@ -12,6 +12,11 @@
 #' can be used in R plots. This font is licensed under the Apache
 #' License Version 2.0 http://www.apache.org/licenses/
 #'
+#'
+#' @note This will take care of ensuring PDF/PostScript usage. The location of the
+#'   font directory is displayed after the base import is complete. It is highly
+#'   recommended that you install them on your system the same way you would any
+#'   other font you wish to use in other programs.
 #' @export
 import_open_sans <- function(){
 
@@ -52,8 +57,18 @@ font_os_semibold <- "Open Sans SemiBold"
 
 
 
-#' Import the
+#' Import the Public Sans font
 #'
+#' This function will import the public sans font to R for use in plots.
+#' Public Sans is Copyright 2015 Impallari Type and licensed under the
+#' SIL Open Font License, Version 1.1
+#'
+#' @note This will take care of ensuring PDF/PostScript usage. The location of the
+#'   font directory is displayed after the base import is complete. It is highly
+#'   recommended that you install them on your system the same way you would any
+#'   other font you wish to use in other programs.
+#'
+#' @export
 import_public_sans <- function(){
 
   public_sans_dir <- system.file("fonts", "public-sans", package = "pwdthemes")
@@ -63,8 +78,56 @@ import_public_sans <- function(){
   message(
     sprintf(
       "You should also install this font on your system if it is not already. You can find them in [%s]",
-      open_sans_dir
+      public_sans_dir
     )
   )
 
 }
+
+#' @rdname PublicSans
+#'
+#' @description font_pub == "Public Sans"
+#' @export
+font_pub <- "Public Sans"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_light == "Public Sans Light"
+#' @export
+font_pub_light <- "Publc Sans Light"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_thin == "Public Sans Thin"
+#' @export
+font_pub_thin <- "Public Sans Thin"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_black == "Public Sans Black"
+#' @export
+font_pub_black <- "Public Sans Black"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_extrabold == "Public Sans ExtraBold"
+#' @export
+font_pub_extrabold <- "Public Sans ExtraBold"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_extralight == "Public Sans ExtraLight"
+#' @export
+font_pub_etralight <- "Public Sans ExtraLight"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_medium == "Public Sans Medium"
+#' @export
+font_pub_medium <- "Public Sans Medium"
+
+#' @rdname PublicSans
+#'
+#' @description font_pub_semibold == "Public Sans SemiBold"
+#' @export
+font_pub_semibold <- "Public Sans SemiBold"
