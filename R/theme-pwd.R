@@ -16,16 +16,21 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri"){
     theme(
       # general
       text = element_text(color = "#0078C8"),
+
+      # plot
       plot.title = element_text(color = "#0078C8", face = "bold"),
       plot.subtitle = element_text(color = "#0078C8"),
+
+      # panel
       # panel.background = element_rect(fill = "#C6DAE7"),
       panel.grid.major = element_line(color = "#C6DAE7"),
-      # axis.title = element_text(color = "#0078C8"),
+      panel.grid.minor = element_line(color = "#C6DAE7"),
+
       # axis
       axis.line = element_line(color = "#001A70"),
       axis.ticks = element_line(color = "#001A70"),
-      axis.title = element_text(color = "#001A70"),
-      axis.text = element_text(color = "#001A70")
+      axis.title = element_text(color = "#001A70", family = "Calibri Light"),
+      axis.text = element_text(color = "#001A70", family = "Calibri Light")
     )
 
   class(out) <- c("pwd_theme", class(out))
