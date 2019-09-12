@@ -51,7 +51,6 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri"){
       # panel
       # panel.background = element_rect(fill = "#C6DAE7"),
       panel.grid.major = element_line(color = "#C6DAE7"),
-      panel.grid.minor = element_line(color = "#C6DAE7"),
 
       # axis
       axis.line = element_line(color = "#001A70"),
