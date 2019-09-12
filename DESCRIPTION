@@ -16,5 +16,6 @@ Imports:
     stringr,
     ggplot2,
     magrittr,
-    extrafont
+    extrafont,
+    purrr
 RoxygenNote: 6.1.1
