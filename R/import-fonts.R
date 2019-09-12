@@ -142,3 +142,21 @@ font_cal <- "Calibri"
 #' @description font_cal_light == "Calibri Light"
 #' @export
 font_cal_light <- "Calibri Light"
+
+
+font_check <- function(font_name, regex = TRUE){
+  fonts <- extrafont::fonttable()
+
+  if (regex){
+    if (any(stringr::str_detect(fonts$FamilyName, font_name))){
+      return(TRUE)
+    } else {
+      return(FALSE)
+    }
+  } else {
+    if (font_name %in% fonts$FamilyName){
+      return(TRUE)
+    } else
+      return(FALSE)
+  }
+}
