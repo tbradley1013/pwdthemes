@@ -75,7 +75,9 @@ ggplot_add.pwd_theme <- function(object, plot, object_name){
 }
 
 
-
+#' Replace the default color and fill options with PWD themed colors
+#'
+#' @export
 pwd_geoms <- function(){
 
   # change black to resolution blue
@@ -83,32 +85,45 @@ pwd_geoms <- function(){
   replace_geom_aes_defaults("fill", "black", "#001A70")
 
   # change grey20 to botticelli
-  replace_geom_aes_defaults("colour", "grey20", "#C6DAE7")
-  replace_geom_aes_defaults("fill", "grey20", "#C6DAE7")
+  replace_geom_aes_defaults("colour", "grey20", "#001A70")
+  replace_geom_aes_defaults("fill", "grey20", "#001A70")
 
   # change abline color to main PWD color
   replace_geom_aes_defaults("colour", "#3366FF", "#0078C8")
 
   # Change geom smooth fill color
   replace_geom_aes_defaults("fill", "grey60", "#BBDDE1")
+  replace_geom_aes_defaults("fill", "grey50", "#BBDDE1")
+
+  replace_geom_aes_defaults("fill", "grey35", "#001A70")
+
+  replace_geom_aes_defaults("fill", "white", "#C6DAE7")
 
 
 }
 
+#' Revert back to default ggplot2 color and fill options
+#'
+#' @export
 undo_pwd_geoms <- function(){
   # change resolution blue to black
   replace_geom_aes_defaults("colour", "#001A70", "black")
   replace_geom_aes_defaults("fill", "#001A70", "black")
 
   # change grey20 to botticelli
-  replace_geom_aes_defaults("colour", "#C6DAE7", "grey20")
-  replace_geom_aes_defaults("fill", "#C6DAE7", "grey20")
+  replace_geom_aes_defaults("colour", "#001A70", "grey20")
+  replace_geom_aes_defaults("fill", "#001A70", "grey20")
 
   # change abline color to main PWD color
   replace_geom_aes_defaults("colour", "#0078C8", "#3366FF")
 
   # change geom smooth fill back
   replace_geom_aes_defaults("fill", "#BBDDE1", "grey60")
+  replace_geom_aes_defaults("fill", "#BBDDE1", "grey50")
+
+  replace_geom_aes_defaults("fill", "#001A70", "grey35")
+
+  replace_geom_aes_defaults("fill", "#C6DAE7", "white")
 }
 
 
