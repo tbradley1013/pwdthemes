@@ -144,6 +144,7 @@ font_cal <- "Calibri"
 font_cal_light <- "Calibri Light"
 
 
+# Utility function to check if a font is available
 font_check <- function(font_name, regex = TRUE){
   fonts <- extrafont::fonttable()
 
