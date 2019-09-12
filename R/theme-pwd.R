@@ -77,6 +77,13 @@ ggplot_add.pwd_theme <- function(object, plot, object_name){
 
 #' Replace the default color and fill options with PWD themed colors
 #'
+#' @rdname pwd_geoms
+#'
+#' @details
+#' This function will overwrite default color and fill options provided
+#' by ggplot2 to match PWD themes more closely. By default, this function
+#' will be run when loading the pwdthemes package. It can be easily undone
+#' by running the undo_pwd_geoms function.
 #' @export
 pwd_geoms <- function(){
 
@@ -102,8 +109,7 @@ pwd_geoms <- function(){
 
 }
 
-#' Revert back to default ggplot2 color and fill options
-#'
+#' @rdname pwd_geoms
 #' @export
 undo_pwd_geoms <- function(){
   # change resolution blue to black
