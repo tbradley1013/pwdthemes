@@ -38,7 +38,8 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri"){
   out <- out %+replace%
     theme(
       panel.border = element_blank(),
-      panel.grid.minor = element_blank()
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank()
     ) +
     theme(
       # general
