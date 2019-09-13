@@ -1,6 +1,9 @@
 #' A ggplot2 theme for PWD
 #'
-#'
+#' This function will apply a custom PWD ggplot2 theme to
+#' ggplot2 objects that matches the style guidelines
+#' provided by the Public Affairs division
+#' @export
 theme_pwd <- function(base_size = 12, base_family = "Calibri"){
 
 
