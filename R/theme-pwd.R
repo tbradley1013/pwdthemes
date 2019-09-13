@@ -69,7 +69,10 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri"){
   return(out)
 }
 
-
+#' Add PWD themes to ggplot objects
+#'
+#' @return a modified ggplot2 object
+#' @export
 ggplot_add.pwd_theme <- function(object, plot, object_name){
   plot$theme <- ggplot2:::update_theme(plot$theme, object)
   plot$labels$title <- stringr::str_to_upper(plot$labels$title)
