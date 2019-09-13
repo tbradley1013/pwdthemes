@@ -47,6 +47,7 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri"){
       # plot
       plot.title = element_text(color = "#0078C8", face = "bold"),
       plot.subtitle = element_text(color = "#0078C8"),
+      plot.caption = element_text(color = "#0078C8", family = family_light)
 
       # panel
       # panel.background = element_rect(fill = "#C6DAE7"),
