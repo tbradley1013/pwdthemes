@@ -5,7 +5,7 @@
 # 2019-09-13
 #===============================================================================
 
-
+#'
 pwd_styling <- function(kable, ...){
   if (!inherits(kable, "knitr_kable")) stop("input must be of class `knitr_kable`")
 
