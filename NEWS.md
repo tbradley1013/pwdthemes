@@ -1,3 +1,7 @@
+# pwdthemes 0.1.1 
+
+* Added pkgdown site
+
 # pwdthemes 0.1.0
 
 * Added ggplot2 theme named `theme_pwd`
