@@ -33,6 +33,13 @@ import_open_sans <- function(){
 
 }
 
+
+#' Open Sans Font Variables
+#'
+#' @name OpenSans
+#' @export
+NULL
+
 #' @rdname OpenSans
 #'
 #' @description font_os == "Open Sans"
@@ -84,6 +91,12 @@ import_public_sans <- function(){
 
 }
 
+#' Public Sans Font variables
+#'
+#' @name PublicSans
+#' @export
+NULL
+
 #' @rdname PublicSans
 #'
 #' @description font_pub == "Public Sans"
@@ -132,6 +145,10 @@ font_pub_medium <- "Public Sans Medium"
 #' @export
 font_pub_semibold <- "Public Sans SemiBold"
 
+#' Calibri Font variables
+#'
+#' @name Calibri
+#' @export
 
 #' @rdname Calibri
 #' @description font_cal == "Calibri"
