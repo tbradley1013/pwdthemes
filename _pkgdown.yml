@@ -1,0 +1,47 @@
+destination: /home/rstudio/package-sites/pwdthemes
+pandoc: 1.19.2.1
+
+reference:
+- title: ggplot2 theme
+  contents:
+  - theme_pwd
+  - scale_color_pwd
+  - scale_fill_pwd
+  - pwd_geoms
+  - undo_pwd_geoms
+
+- title: Rmarkdown templates
+  contents:
+  - pwd_report
+  - pwd_memo
+  - pwd_meeting_agenda
+
+- title: fonts
+  contents:
+  - Calibri
+  - OpenSans
+  - PublicSans
+  - import_open_sans
+  - import_public_sans
+
+
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: Changelog
+      href: news/index.html

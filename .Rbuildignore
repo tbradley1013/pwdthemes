@@ -3,3 +3,6 @@
 ^README\.Rmd$
 package_sticker.R
 pwdthemes.png
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
