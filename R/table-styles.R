@@ -23,3 +23,29 @@ pwd_styling <- function(kable, ...){
 
   return(out)
 }
+
+
+
+#' Define CSS to format HTML kable
+#'
+#' @details
+#' This function will define css in your HTML Rmarkdown document
+#' that will customize the format of kable's to meet PWD style
+#' guidelines. This function only needs to be called once at the beginning
+#' of your Rmarkdown document and will only work with html output
+#'
+#'
+#' @export
+set_pwd_kable <- function(){
+  # define css that will format tables in PWD style for the entire HTML document
+  htmltools::tags$style(htmltools::HTML("
+    thead {
+      background-color: #0078C8;
+      color: #FFFFFF;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd) {
+      background-color: #C6DAE7;
+    }
+  "))
+}
