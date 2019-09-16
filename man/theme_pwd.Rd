@@ -22,4 +22,10 @@ provided by the Public Affairs division
 By default, theme_pwd will use the Calibri font as the base_family if
 it is installed and available. Other fonts that are provided with this
 package that can be used in this package are Open Sans and Public Sans
+
+The PWD style guideline specifies that the title of figures should be
+in all capitals. This theme will convert your title to caps if you specify
+the title using \code{\link[ggplot2]{labs}} or \code{\link[ggplot2]{ggtitle}}
+prior to calling \code{theme_pwd}. If you want to avoid the capitalization
+than you can call theme_pwd before labs
 }
