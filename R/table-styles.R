@@ -8,6 +8,9 @@
 #' Add PWD styling to kable functions
 #'
 #' @param kable the kable that you with to style
+#' @param options the options to be passed to latex_options or bootstrap_options
+#' arguments in \code{\link[kableExtra]{kable_extra}} depending on whether
+#' the format is latex or html, respectively
 #' @param ... additional params to be passed to \code{\link[kableExtra]{kable_styling}}
 #'
 #' @details
@@ -24,7 +27,7 @@
 #' on a kable that it has previously been applied to.
 #'
 #' @export
-pwd_styling <- function(kable, ...){
+pwd_styling <- function(kable, options = c("striped", "bordered"), ...){
   if (!inherits(kable, "knitr_kable")) stop("input must be of class `knitr_kable`")
 
   out <- kable %>%
@@ -33,10 +36,10 @@ pwd_styling <- function(kable, ...){
 
   if (attr(kable, "format") == "latex"){
     out <- out %>%
-      kableExtra::kable_styling(latex_options = "striped", stripe_color = "#C6DAE7", ...)
+      kableExtra::kable_styling(latex_options = options, stripe_color = "#C6DAE7", ...)
   } else {
     out <- out %>%
-      kableExtra::kable_styling(bootstrap_options = "striped", ...)
+      kableExtra::kable_styling(bootstrap_options = options, ...)
   }
 
   return(out)
