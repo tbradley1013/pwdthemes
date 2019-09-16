@@ -172,5 +172,5 @@ replace_geom_aes_defaults <- function(name, old_aes, new_aes) {
     purrr::compact() %>%
     purrr::keep(~ !is.na(.) & . == old_aes)
   geoms <- gsub("^Geom(.*)", "\\1", names(matching_geoms))
-  purrr::walk(geoms, update_geom_defaults, setNames(list(new_aes), name))
+  purrr::walk(geoms, ggplot2::update_geom_defaults, setNames(list(new_aes), name))
 }
