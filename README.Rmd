@@ -46,6 +46,8 @@ This package provides a custom `ggplot2` theme with the function `theme_pwd`. Th
 ```{r}
 library(pwdthemes)
 library(ggplot2)
+# set geoms to pwd colors
+pwd_geoms()
 library(dplyr)
 library(ggridges)
 library(patchwork)

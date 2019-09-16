@@ -47,6 +47,8 @@ would look good.
 ``` r
 library(pwdthemes)
 library(ggplot2)
+# set geoms to pwd colors
+pwd_geoms()
 library(dplyr)
 library(ggridges)
 library(patchwork)
