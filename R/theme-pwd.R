@@ -85,8 +85,11 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri", ...){
   return(out)
 }
 
+
+
 #' Add PWD themes to ggplot objects
 #'
+#' @importFrom ggplot2 ggplot_add
 #' @return a modified ggplot2 object
 #' @export
 ggplot_add.pwd_theme <- function(object, plot, object_name){
