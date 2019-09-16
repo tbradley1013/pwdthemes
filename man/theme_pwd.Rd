@@ -4,10 +4,22 @@
 \alias{theme_pwd}
 \title{A ggplot2 theme for PWD}
 \usage{
-theme_pwd(base_size = 12, base_family = "Calibri")
+theme_pwd(base_size = 12, base_family = "Calibri", ...)
+}
+\arguments{
+\item{base_size}{the base font size}
+
+\item{base_family}{the base font family}
+
+\item{...}{additional parameters to pass to \code{\link[ggplot2]{theme_bw}}}
 }
 \description{
 This function will apply a custom PWD ggplot2 theme to
 ggplot2 objects that matches the style guidelines
 provided by the Public Affairs division
+}
+\details{
+By default, theme_pwd will use the Calibri font as the base_family if
+it is installed and available. Other fonts that are provided with this
+package that can be used in this package are Open Sans and Public Sans
 }
