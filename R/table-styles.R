@@ -8,10 +8,20 @@
 #' Add PWD styling to kable functions
 #'
 #' @param kable the kable that you with to style
-#' @param ... additional params to be passed to kableExtra::kable_styling
+#' @param ... additional params to be passed to \code{\link[kableExtra]{kable_styling}}
 #'
 #' @details
+#' This function will add styling to your kable tables used in Rmarkdown
+#' documents. It will add the "striped" option to the table and make the
+#' background of the column names PWD blue with white font. In pdf outputs
+#' it will also change the background color of the striped rows. If you
+#' are knitting to an HTML document than you will need to use the
+#' \code{\link[pwdthemes]{set_pwd_styling}}.
 #'
+#' It is important to note that if you use this function, than you must
+#' pass all other arguments intended for \code{\link[kableExtra]{kable_styling}}
+#' to this function. Currently, you can not use the kable_styling function
+#' on a kable that it has previously been applied to.
 #'
 #' @export
 pwd_styling <- function(kable, ...){
@@ -47,7 +57,7 @@ pwd_styling <- function(kable, ...){
 #'
 #'
 #' @export
-set_pwd_kable <- function(){
+set_pwd_styling <- function(){
   # define css that will format tables in PWD style for the entire HTML document
   htmltools::tags$style(htmltools::HTML("
     thead {
