@@ -26,7 +26,10 @@ logo <- image_read("man/figures/water-logo-large-white.png")
 
 p <- ggplot() +
   geom_hexagon(size = 1, fill = "pink", color = "#001A70") +
-  ggplot2::theme_void()
+  ggplot2::theme_void() +
+  theme(
+    plot.background = element_rect(fill = "black")
+  )
 
 ggsave("sticker/blank-hex.png", plot = p, width = 1.73, height = 2, units = "in")
 
@@ -46,7 +49,8 @@ sticker_back <- image_append(
   )
 ) %>%
   image_composite(image_scale(logo, "235"), offset = "+142+350") %>%
-  image_composite(blank_hex)
+  image_composite(blank_hex) %>%
+  image_transparent("black")
 
 
 # comb_image <- image_composite(theme_back_crop, image_scale(logo, 200), offset = "+87+200")
