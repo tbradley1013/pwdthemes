@@ -8,30 +8,18 @@
 library(hexSticker)
 library(magick)
 library(ggplot2)
+library(showtext)
 
 logo <- image_read("man/figures/water-logo-large-white.png")
 
-# sticker_pal <- pwdthemes:::pwd_palettes$full[c(4, 1, 8, 6)]
-# # sticker_pal <- pwdthemes:::pwd_palettes$full[c(8,4, 6, 3)]
-# pal_seq <- seq_along(sticker_pal)
-# image(pal_seq, 1, as.matrix(pal_seq), col = sticker_pal,
-#       xlab = "", ylab = "", xaxt = "n", yaxt = "n", bty = "n")
+# p <- ggplot() +
+#   geom_hexagon(size = 0.75, fill = "pink", color = "#001A70") +
+#   ggplot2::theme_void() +
+#   theme(
+#     plot.background = element_rect(fill = "black")
+#   )
 #
-#
-# png(file = "sticker/theme-background.png")
-# image(pal_seq, 1, as.matrix(pal_seq), col = sticker_pal,
-#       xlab = "", ylab = "", xaxt = "n", yaxt = "n", bty = "n")
-# dev.off()
-
-
-p <- ggplot() +
-  geom_hexagon(size = 0.75, fill = "pink", color = "#001A70") +
-  ggplot2::theme_void() +
-  theme(
-    plot.background = element_rect(fill = "black")
-  )
-
-ggsave("sticker/blank-hex.png", plot = p, width = 1.73, height = 2, units = "in")
+# ggsave("sticker/blank-hex.png", plot = p, width = 1.73, height = 2, units = "in")
 
 blank_hex <- image_read("sticker/blank-hex.png")
 blank_hex <- blank_hex %>%
@@ -54,14 +42,8 @@ sticker_back <- image_append(
   image_transparent("black")
 
 
-# comb_image <- image_composite(theme_back_crop, image_scale(logo, 200), offset = "+87+200")
-#
-#
-# sticker_back <- image_composite(image_scale(theme_back_crop, 350), blank_hex) %>%
-#   image_crop(geometry = "260x300+0+0") %>%
-#   image_transparent("white") %>%
-#   image_scale("600") %>%
-#   image_composite(image_scale(logo, 275), offset = "+162+375")
+font_add_google("Open Sans", "open_sans")
+
 # when this command is run it will overwrite the pwdthemes.png file. The two lines
 # below it must be run to correctly size the sticker.
 sticker(sticker_back,
@@ -71,8 +53,10 @@ sticker(sticker_back,
         s_width =2.18,
         s_height = 2.18,
         # p_color = "#F37720",
+        p_family = "open_sans",
         p_color = "white",
         p_size = 20,
+        p_y = 1.25,
         h_fill = "#0078C8",
         h_color = "white",
         h_size = 2)
