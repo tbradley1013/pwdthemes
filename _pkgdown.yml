@@ -24,6 +24,11 @@ reference:
   - import_open_sans
   - import_public_sans
 
+- title: Color palettes
+  contents:
+  - view_pwd_palette
+  - pwd_pals
+
 
 navbar:
   structure:
@@ -42,6 +47,11 @@ navbar:
     reference:
       text: Reference
       href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: 'PWD Color Palettes'
+        href: articles/pwd-palettes.html
     news:
       text: Changelog
       href: news/index.html
