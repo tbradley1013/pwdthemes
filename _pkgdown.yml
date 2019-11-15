@@ -39,7 +39,9 @@ navbar:
     - articles
     - tutorials
     - news
-    right: github
+    right:
+    - icon: fa-github fa-lg
+      href: https://github.com/tbradley1013/pwdthemes
   components:
     home:
       icon: fa-home fa-lg
