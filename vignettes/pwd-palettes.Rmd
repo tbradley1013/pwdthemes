@@ -1,0 +1,198 @@
+---
+title: "PWD Color Palettes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PWD Color Palettes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 8, 
+  fig.height = 4,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+# Introduction
+
+The `pwdthemes` R package includes several color palettes that are based on the style guide provided by the Public Affairs division of the Philadelphia Water Department (PWD). These palettes can be accessed using the `pwd_pals()` functional or more easily through the `scale_color_pwd` and `scale_fill_pwd` ggplot2 scale functions. This guide displays what the full palettes look like. 
+
+```{r setup}
+library(ggplot2)
+library(patchwork)
+library(ggridges)
+library(pwdthemes)
+```
+
+First, I will create the base figures and define a helper function to render the different figures with each palette
+```{r define-funs}
+large_diamonds <- diamonds[diamonds$carat > 2.2, ]
+
+pc <- ggplot(large_diamonds, aes(price, carat, color = cut)) + 
+  geom_point() + 
+  theme_pwd()
+
+pf <- ggplot(large_diamonds, aes(price, cut, fill = cut)) + 
+  geom_density_ridges() + 
+  theme_pwd()
+
+display_pals <- function(p1 = pc, p2 = pf, pal){
+  p1_out <- p1 + scale_color_pwd(pal)
+  p2_out <- p2 + scale_fill_pwd(pal)
+  
+  out <- p1_out + p2_out
+  
+  return(out)
+}
+
+```
+
+\newpage
+
+# Main 
+
+```{r main}
+pc_main <- pc + scale_color_pwd("main")
+pf_main <- pf + scale_fill_pwd("main")
+
+pc + pf
+
+view_pwd_palette("main")
+```
+
+\newpage
+# Main Dark
+
+```{r main-dark}
+pc_main <- pc + scale_color_pwd("main_dark")
+pf_main <- pf + scale_fill_pwd("main_dark")
+
+pc + pf
+
+view_pwd_palette("main_dark")
+```
+
+\newpage
+# Main Light
+
+```{r main-light}
+pc_main <- pc + scale_color_pwd("main_light")
+pf_main <- pf + scale_fill_pwd("main_light")
+
+pc + pf
+
+view_pwd_palette("main_light")
+```
+
+\newpage
+# Highlights 
+
+```{r highlights}
+pc_main <- pc + scale_color_pwd("highlights")
+pf_main <- pf + scale_fill_pwd("highlights")
+
+pc + pf
+
+view_pwd_palette("highlights")
+```
+
+\newpage
+# Highlights Dark
+
+```{r highlights-dark}
+pc_main <- pc + scale_color_pwd("highlights_dark")
+pf_main <- pf + scale_fill_pwd("highlights_dark")
+
+pc + pf
+
+view_pwd_palette("highlights_dark")
+```
+
+\newpage
+# Highlights Light
+
+```{r highlights-light}
+pc_main <- pc + scale_color_pwd("highlights_light")
+pf_main <- pf + scale_fill_pwd("highlights_light")
+
+pc + pf
+
+view_pwd_palette("highlights_light")
+```
+
+\newpage
+# Map 
+
+```{r map}
+pc_main <- pc + scale_color_pwd("map")
+pf_main <- pf + scale_fill_pwd("map")
+
+pc + pf
+
+view_pwd_palette("map")
+```
+
+\newpage
+# Map Dark
+
+```{r map-dark}
+pc_main <- pc + scale_color_pwd("map_dark")
+pf_main <- pf + scale_fill_pwd("map_dark")
+
+pc + pf
+
+view_pwd_palette("map_dark")
+```
+
+\newpage
+# Map Light 
+
+```{r map-light}
+pc_main <- pc + scale_color_pwd("map_light")
+pf_main <- pf + scale_fill_pwd("map_light")
+
+pc + pf
+
+view_pwd_palette("map_light")
+```
+
+\newpage
+# Dark
+
+```{r dark}
+pc_main <- pc + scale_color_pwd("dark")
+pf_main <- pf + scale_fill_pwd("dark")
+
+pc + pf
+
+view_pwd_palette("dark")
+```
+
+\newpage
+# Light
+
+```{r light}
+pc_main <- pc + scale_color_pwd("light")
+pf_main <- pf + scale_fill_pwd("light")
+
+pc + pf
+
+view_pwd_palette("light")
+```
+
+\newpage
+# Full
+
+```{r full}
+pc_main <- pc + scale_color_pwd("full")
+pf_main <- pf + scale_fill_pwd("full")
+
+pc + pf
+
+view_pwd_palette("full")
+```
