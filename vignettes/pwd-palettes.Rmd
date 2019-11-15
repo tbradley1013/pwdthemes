@@ -52,7 +52,7 @@ display_pals <- function(p1 = pc, p2 = pf, pal){
 
 ```
 
-\newpage
+
 
 # Main 
 
@@ -65,7 +65,7 @@ pc + pf
 view_pwd_palette("main")
 ```
 
-\newpage
+
 # Main Dark
 
 ```{r main-dark}
@@ -77,7 +77,7 @@ pc + pf
 view_pwd_palette("main_dark")
 ```
 
-\newpage
+
 # Main Light
 
 ```{r main-light}
@@ -89,7 +89,7 @@ pc + pf
 view_pwd_palette("main_light")
 ```
 
-\newpage
+
 # Highlights 
 
 ```{r highlights}
@@ -101,7 +101,7 @@ pc + pf
 view_pwd_palette("highlights")
 ```
 
-\newpage
+
 # Highlights Dark
 
 ```{r highlights-dark}
@@ -113,7 +113,7 @@ pc + pf
 view_pwd_palette("highlights_dark")
 ```
 
-\newpage
+
 # Highlights Light
 
 ```{r highlights-light}
@@ -125,7 +125,7 @@ pc + pf
 view_pwd_palette("highlights_light")
 ```
 
-\newpage
+
 # Map 
 
 ```{r map}
@@ -137,7 +137,7 @@ pc + pf
 view_pwd_palette("map")
 ```
 
-\newpage
+
 # Map Dark
 
 ```{r map-dark}
@@ -149,7 +149,7 @@ pc + pf
 view_pwd_palette("map_dark")
 ```
 
-\newpage
+
 # Map Light 
 
 ```{r map-light}
@@ -161,7 +161,7 @@ pc + pf
 view_pwd_palette("map_light")
 ```
 
-\newpage
+
 # Dark
 
 ```{r dark}
@@ -173,7 +173,7 @@ pc + pf
 view_pwd_palette("dark")
 ```
 
-\newpage
+
 # Light
 
 ```{r light}
@@ -185,7 +185,7 @@ pc + pf
 view_pwd_palette("light")
 ```
 
-\newpage
+
 # Full
 
 ```{r full}
