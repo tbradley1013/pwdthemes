@@ -31,9 +31,9 @@ blank_hex <- blank_hex %>%
 
 sticker_back <- image_append(
   c(
-    image_blank(173, 600, "#001A70"),
-    image_blank(173, 600, "#0078C8"),
-    image_blank(173, 600, "#F37720")
+    image_blank(129.75, 600, "#001A70"),
+    image_blank(129.75*2, 600, "#0078C8"),
+    image_blank(129.75, 600, "#F37720")
   )
 ) %>%
   image_composite(image_scale(logo, "235"), offset = "+142+350") %>%
