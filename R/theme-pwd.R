@@ -93,7 +93,7 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri", ...){
 #' @return a modified ggplot2 object
 #' @export
 ggplot_add.pwd_theme <- function(object, plot, object_name){
-  plot$theme <- ggplot2:::update_theme(plot$theme, object)
+  plot$theme <- add_theme(plot$theme, object)
   plot$labels$title <- stringr::str_to_upper(plot$labels$title)
   plot
 }
@@ -173,4 +173,57 @@ replace_geom_aes_defaults <- function(name, old_aes, new_aes) {
     purrr::keep(~ !is.na(.) & . == old_aes)
   geoms <- gsub("^Geom(.*)", "\\1", names(matching_geoms))
   purrr::walk(geoms, ggplot2::update_geom_defaults, setNames(list(new_aes), name))
+}
+
+
+
+# This function is an internal ggplot2 function used to add theme to the object
+#' Modify properties of an element in a theme object
+#'
+#' @param t1 A theme object
+#' @param t2 A theme object that is to be added to `t1`
+#' @param t2name A name of the t2 object. This is used for printing
+#'   informative error messages.
+#' @keywords internal
+add_theme <- function(t1, t2, t2name) {
+  if (!is.list(t2)) { # in various places in the code base, simple lists are used as themes
+    abort(glue("Can't add `{t2name}` to a theme object."))
+  }
+
+  # If t2 is a complete theme or t1 is NULL, just return t2
+  if (is_theme_complete(t2) || is.null(t1))
+    return(t2)
+
+  # Iterate over the elements that are to be updated
+  for (item in names(t2)) {
+    x <- merge_element(t2[[item]], t1[[item]])
+
+    # Assign it back to t1
+    # This is like doing t1[[item]] <- x, except that it preserves NULLs.
+    # The other form will simply drop NULL values
+    t1[item] <- list(x)
+  }
+
+  # make sure the "complete" attribute is set; this can be missing
+  # when t1 is an empty list
+  attr(t1, "complete") <- is_theme_complete(t1)
+
+  # Only validate if both themes should be validated
+  attr(t1, "validate") <-
+    is_theme_validate(t1) && is_theme_validate(t2)
+
+  t1
+}
+
+
+# check whether theme is complete
+is_theme_complete <- function(x) isTRUE(attr(x, "complete", exact = TRUE))
+
+# check whether theme should be validated
+is_theme_validate <- function(x) {
+  validate <- attr(x, "validate", exact = TRUE)
+  if (is.null(validate))
+    TRUE # we validate by default
+  else
+    isTRUE(validate)
 }
