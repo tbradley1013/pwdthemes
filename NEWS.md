@@ -1,3 +1,7 @@
+# pwdthemes 0.1.2
+
+* Fixed issue with reliance on ggplot2 internal functions
+
 # pwdthemes 0.1.1 
 
 * Added pkgdown site
