@@ -57,7 +57,7 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri", ...){
       panel.grid.minor = ggplot2::element_blank(),
       panel.background = ggplot2::element_blank()
     ) +
-    theme(
+    ggplot2::theme(
       # general
       text = ggplot2::element_text(color = "#0078C8"),
 
