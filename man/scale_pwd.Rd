@@ -6,14 +6,11 @@
 \alias{scale_fill_pwd}
 \title{Color scale constructor for PWD colors}
 \usage{
-scale_color_pwd(palette = "main", reverse = FALSE, discrete = TRUE,
-  ...)
+scale_color_pwd(palette = "main", reverse = FALSE, discrete = TRUE, ...)
 
-scale_colour_pwd(palette = "main", reverse = FALSE, discrete = TRUE,
-  ...)
+scale_colour_pwd(palette = "main", reverse = FALSE, discrete = TRUE, ...)
 
-scale_fill_pwd(palette = "main", reverse = FALSE, discrete = TRUE,
-  ...)
+scale_fill_pwd(palette = "main", reverse = FALSE, discrete = TRUE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in pwd_palettes}
