@@ -1,3 +1,7 @@
+# pwdthemes 0.1.3
+
+* Fixing namespace issues with `theme_pwd`
+
 # pwdthemes 0.1.2
 
 * Fixed issue with reliance on ggplot2 internal functions
