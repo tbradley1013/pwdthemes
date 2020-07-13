@@ -19,6 +19,8 @@
 #' prior to calling \code{theme_pwd}. If you want to avoid the capitalization
 #' than you can call theme_pwd before labs
 #'
+#' @importFrom ggplot2 %+replace%
+#'
 #' @export
 theme_pwd <- function(base_size = 12, base_family = "Calibri", ...){
 
