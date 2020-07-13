@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Add PWD themes to ggplot objects — ggplot_add.pwd_theme • pwdthemes</title>
+<title>Modify properties of an element in a theme object — add_theme • pwdthemes</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Add PWD themes to ggplot objects — ggplot_add.pwd_theme" />
+<meta property="og:title" content="Modify properties of an element in a theme object — add_theme" />
 
-<meta property="og:description" content="Add PWD themes to ggplot objects" />
+<meta property="og:description" content="Modify properties of an element in a theme object" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -109,32 +109,44 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Add PWD themes to ggplot objects</h1>
+    <h1>Modify properties of an element in a theme object</h1>
     
-    <div class="hidden name"><code>ggplot_add.pwd_theme.Rd</code></div>
+    <div class="hidden name"><code>add_theme.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Add PWD themes to ggplot objects</p>
+    <p>Modify properties of an element in a theme object</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for pwd_theme</span>
-<span class='fu'>ggplot_add</span>(<span class='no'>object</span>, <span class='no'>plot</span>, <span class='no'>object_name</span>)</pre>
-        
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>a modified ggplot2 object</p>
+    <pre class="usage"><span class='fu'>add_theme</span>(<span class='no'>t1</span>, <span class='no'>t2</span>, <span class='no'>t2name</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>t1</th>
+      <td><p>A theme object</p></td>
+    </tr>
+    <tr>
+      <th>t2</th>
+      <td><p>A theme object that is to be added to `t1`</p></td>
+    </tr>
+    <tr>
+      <th>t2name</th>
+      <td><p>A name of the t2 object. This is used for printing
+informative error messages.</p></td>
+    </tr>
+    </table>
     
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#value">Value</a></li>
-          </ul>
+      <li><a href="#arguments">Arguments</a></li>
+                </ul>
 
   </div>
 </div>
