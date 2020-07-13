@@ -49,35 +49,35 @@ theme_pwd <- function(base_size = 12, base_family = "Calibri", ...){
     }
   }
 
-  out <- theme_bw(base_size = base_size, base_family = base_family, ...)
+  out <- ggplot2::theme_bw(base_size = base_size, base_family = base_family, ...)
 
   out <- out %+replace%
-    theme(
-      panel.border = element_blank(),
-      panel.grid.minor = element_blank(),
-      panel.background = element_blank()
+    ggplot2::theme(
+      panel.border = ggplot2::element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.background = ggplot2::element_blank()
     ) +
     theme(
       # general
-      text = element_text(color = "#0078C8"),
+      text = ggplot2::element_text(color = "#0078C8"),
 
       # plot
-      plot.title = element_text(color = "#0078C8", face = "bold"),
-      plot.subtitle = element_text(color = "#0078C8"),
-      plot.caption = element_text(color = "#0078C8", family = family_light),
+      plot.title = ggplot2::element_text(color = "#0078C8", face = "bold"),
+      plot.subtitle = ggplot2::element_text(color = "#0078C8"),
+      plot.caption = ggplot2::element_text(color = "#0078C8", family = family_light),
 
       # panel
       # panel.background = element_rect(fill = "#C6DAE7"),
-      panel.grid.major = element_line(color = "#C6DAE7"),
+      panel.grid.major = ggplot2::element_line(color = "#C6DAE7"),
 
       # axis
-      axis.line = element_line(color = "#001A70"),
-      axis.ticks = element_line(color = "#001A70"),
-      axis.title = element_text(color = "#001A70", family = family_light),
-      axis.text = element_text(color = "#001A70", family = family_light),
+      axis.line = ggplot2::element_line(color = "#001A70"),
+      axis.ticks = ggplot2::element_line(color = "#001A70"),
+      axis.title = ggplot2::element_text(color = "#001A70", family = family_light),
+      axis.text = ggplot2::element_text(color = "#001A70", family = family_light),
 
       # legend
-      legend.text = element_text(color = "#001A70")
+      legend.text = ggplot2::element_text(color = "#001A70")
     )
 
   class(out) <- c("pwd_theme", class(out))
@@ -187,7 +187,7 @@ replace_geom_aes_defaults <- function(name, old_aes, new_aes) {
 #' @keywords internal
 add_theme <- function(t1, t2, t2name) {
   if (!is.list(t2)) { # in various places in the code base, simple lists are used as themes
-    abort(glue("Can't add `{t2name}` to a theme object."))
+    abort(glue::glue("Can't add `{t2name}` to a theme object."))
   }
 
   # If t2 is a complete theme or t1 is NULL, just return t2
@@ -196,7 +196,7 @@ add_theme <- function(t1, t2, t2name) {
 
   # Iterate over the elements that are to be updated
   for (item in names(t2)) {
-    x <- merge_element(t2[[item]], t1[[item]])
+    x <- ggplot2::merge_element(t2[[item]], t1[[item]])
 
     # Assign it back to t1
     # This is like doing t1[[item]] <- x, except that it preserves NULLs.
