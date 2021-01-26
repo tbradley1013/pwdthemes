@@ -1,3 +1,7 @@
+# pwdthemes 0.1.4
+
+* Add csl pandoc formatting to each of the rmarkdown templates
+
 # pwdthemes 0.1.3
 
 * Fixing namespace issues with `theme_pwd`
