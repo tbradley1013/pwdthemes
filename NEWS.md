@@ -1,6 +1,6 @@
 # pwdthemes 0.1.5
 
-* Removed Calibri font due to issues with deployment to Connect server. Calibri is only available on Windows
+* Removed Calibri font due to issues with deployment to Connect server. Calibri is only available on Windows. Switched to Arial
 
 # pwdthemes 0.1.4
 
