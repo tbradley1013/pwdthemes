@@ -1,3 +1,7 @@
+# pwdthemes 0.1.5
+
+* Removed Calibri font due to issues with deployment to Connect server. Calibri is only available on Windows
+
 # pwdthemes 0.1.4
 
 * Add csl pandoc formatting to each of the rmarkdown templates
