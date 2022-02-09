@@ -1,3 +1,7 @@
+# pwdthemes 0.1.6
+
+* Resorted to default Rmarkdown font and removed dependency for the fontspec LaTeX package as it was causing a lot of issues with knitting for various reports
+
 # pwdthemes 0.1.5
 
 * Removed Calibri font due to issues with deployment to Connect server. Calibri is only available on Windows. Switched to Arial

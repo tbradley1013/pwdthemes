@@ -1,7 +1,7 @@
 Package: pwdthemes
 Type: Package
 Title: A package of PWD Themes
-Version: 0.1.5
+Version: 0.1.6
 Author: Tyler Bradley
 Maintainer: Tyler Bradley <tyler.bradley@phila.gov>
 Description: This package is designed to provide sset theme options for 
@@ -19,7 +19,7 @@ Imports:
     extrafont,
     purrr,
     htmltools
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.2
 Suggests: 
     knitr,
     rmarkdown

@@ -12,7 +12,23 @@
 \alias{font_pub_medium}
 \alias{font_pub_semibold}
 \title{Public Sans Font variables}
-\format{An object of class \code{character} of length 1.}
+\format{
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_pub
 

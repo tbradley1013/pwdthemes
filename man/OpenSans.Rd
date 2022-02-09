@@ -8,7 +8,15 @@
 \alias{font_os_extrabold}
 \alias{font_os_semibold}
 \title{Open Sans Font Variables}
-\format{An object of class \code{character} of length 1.}
+\format{
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_os
 

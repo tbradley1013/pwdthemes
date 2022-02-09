@@ -6,7 +6,11 @@
 \alias{font_cal}
 \alias{font_cal_light}
 \title{Calibri Font variables}
-\format{An object of class \code{character} of length 1.}
+\format{
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_cal
 
