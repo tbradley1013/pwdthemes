@@ -24,7 +24,7 @@ pwd_meeting_agenda <- function(...){
 pdf_document_format <- function(
   format, template = find_resource(format, 'template.tex'), ...
 ) {
-  fmt <- rmarkdown::pdf_document(..., template = template, latex_engine = "lualatex")
+  fmt <- rmarkdown::pdf_document(..., template = template)
   fmt$inherits <- "pdf_document"
   fmt
 }
