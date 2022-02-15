@@ -1,7 +1,7 @@
 Package: pwdthemes
 Type: Package
 Title: A package of PWD Themes
-Version: 0.1.6
+Version: 0.1.7
 Author: Tyler Bradley
 Maintainer: Tyler Bradley <tyler.bradley@phila.gov>
 Description: This package is designed to provide sset theme options for 

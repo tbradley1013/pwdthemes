@@ -5,33 +5,43 @@ pwd_colors <- c(
   # main
   `blue` = "#0078C8",
 
-  # dark main accents
+  # dark colors
   `persian green` = "#00B388",
   `cerulean` = "#00B5E2",
+  `genoa` = "#25786C",
+  `jelly bean` = "#2887A1",
   `resolution blue` = "#001A70",
+  `butterfly bush` = "#5F468F",
 
-  # light main accents
-  `pear` = "#DBE442",
-  `ziggurat` = "#B8DDE1",
-  `botticelli` = "#C6DAE7",
-
-  # dark highlights
+  # bright colors
   `tango` = "#F37720",
-  `burnt sienna` = "#F26C51",
-  `blue marguerite` = "#7474C1",
+  `punch` = "#E45036",
+  `puce` = "#D98894",
+  `wattle` = "#C6CE47"
 
-  # light highlights
-  `grandis` = "#FDD086",
-  `zinnwaldite` = "#ECC3B2",
-  `gray suit` = "#C6C4D2",
 
-  # dark map
-  `muddy waters` = "#B9975B",
-  `trendy green` = "#76881D",
-
-  # light map
-  `primrose` = "#F1EB9C",
-  `pine glade` = "#BFCC80"
+  # # light main accents
+  # `pear` = "#DBE442",
+  # `ziggurat` = "#B8DDE1",
+  # `botticelli` = "#C6DAE7",
+  #
+  # # dark highlights
+  #
+  # `burnt sienna` = "#F26C51",
+  # `blue marguerite` = "#7474C1",
+  #
+  # # light highlights
+  # `grandis` = "#FDD086",
+  # `zinnwaldite` = "#ECC3B2",
+  # `gray suit` = "#C6C4D2",
+  #
+  # # dark map
+  # `muddy waters` = "#B9975B",
+  # `trendy green` = "#76881D",
+  #
+  # # light map
+  # `primrose` = "#F1EB9C",
+  # `pine glade` = "#BFCC80"
 )
 
 #' Function to extract PWD colors as hex codes
@@ -48,44 +58,45 @@ pwd_cols <- function(...){
 
 
 pwd_palettes <- list(
-  `main` = pwd_cols("blue", "persian green", "cerulean",
-                    "resolution blue", "pear", "ziggurat",
-                    "botticelli"),
+  # `main` = pwd_cols("blue", "persian green", "cerulean",
+  #                   "resolution blue", "pear", "ziggurat",
+  #                   "botticelli"),
 
-  `main_dark` = pwd_cols("blue", "persian green",
-                         "cerulean", "resolution blue"),
+  `main` = pwd_cols("blue", "tango", "persian green", "punch",
+                    "cerulean", "butterfly brush", "resolution blue",
+                    "puce", "jelly bean", "wattle", "genoa"),
 
-  `main_light` = pwd_cols("blue", "pear",
-                          "ziggurat", "botticelli"),
+  `primary` = pwd_cols("blue", "persian green", "cerulean", "resolution blue",
+                         "butterfly brush", "jelly bean", "genoa"),
 
-  `highlights` = pwd_cols("tango", "burnt sienna",
-                          "blue marguerite", "grandis",
-                          "zinnwaldite", "gray suit"),
 
-  `highlights_dark` = pwd_cols("tango", "burnt sienna", "blue marguerite"),
+  `highlight` = pwd_cols("tango", "punch",
+                          "puce", "wattle")
 
-  `highlights_light` = pwd_cols("grandis", "zinnwaldite", "gray suit"),
+  # `highlights_dark` = pwd_cols("tango", "burnt sienna", "blue marguerite"),
+  #
+  # `highlights_light` = pwd_cols("grandis", "zinnwaldite", "gray suit"),
+  #
+  # `map` = pwd_cols("muddy waters", "trendy green",
+  #                  "primrose", "pine glade"),
 
-  `map` = pwd_cols("muddy waters", "trendy green",
-                   "primrose", "pine glade"),
+  # `map_dark` = pwd_cols("muddy waters", "trendy green"),
+  #
+  # `map_light` = pwd_cols("primrose", "pine glade"),
 
-  `map_dark` = pwd_cols("muddy waters", "trendy green"),
-
-  `map_light` = pwd_cols("primrose", "pine glade"),
-
-  `dark` = pwd_cols("blue", "persian green", "cerulean",
-                    "resolution blue", "tango", "burnt sienna",
-                    "blue marguerite"),
-
-  `light` = pwd_cols("blue", "pear", "ziggurat",
-                     "botticelli", "grandis", "zinnwaldite",
-                     "gray suit"),
-
-  `full` = pwd_cols("blue", "persian green", "cerulean",
-                    "resolution blue", "pear", "ziggurat",
-                    "botticelli", "tango", "burnt sienna",
-                    "blue marguerite", "grandis", "zinnwaldite",
-                    "gray suit")
+  # `dark` = pwd_cols("blue", "persian green", "cerulean",
+  #                   "resolution blue", "tango", "burnt sienna",
+  #                   "blue marguerite"),
+  #
+  # `light` = pwd_cols("blue", "pear", "ziggurat",
+  #                    "botticelli", "grandis", "zinnwaldite",
+  #                    "gray suit"),
+  #
+  # `full` = pwd_cols("blue", "persian green", "cerulean",
+  #                   "resolution blue", "pear", "ziggurat",
+  #                   "botticelli", "tango", "burnt sienna",
+  #                   "blue marguerite", "grandis", "zinnwaldite",
+  #                   "gray suit")
 )
 
 
@@ -112,9 +123,13 @@ pwd_palettes <- list(
 #' @export
 pwd_pals <- function(palette = "main", reverse = FALSE, ...){
   if (!(palette %in% names(pwd_palettes))) {
-    stop("Palette specified is not a valid PWD palette type! ",
-         "Please select from the following: ",
-         paste(names(pwd_palettes), collapse = ", "))
+    warning(
+      "Palette specified is not a valid PWD palette type! Default palette will be used.",
+      "Please select from the following: ",
+      paste(names(pwd_palettes), collapse = ", "),
+      call. = FALSE
+    )
+    palette <- "main"
   }
 
   pal <- pwd_palettes[[palette]]

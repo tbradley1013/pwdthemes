@@ -1,7 +1,12 @@
+# pwdthemes 0.1.7 (2022-02-15)
+
+* Updated pwd palettes to match the recommended palettes from PWD's Public Affairs office
+* Removed lualatex as the forced latex engine for PWD Rmarkdown templates
+
+
 # pwdthemes 0.1.6
 
 * Resorted to default Rmarkdown font and removed dependency for the fontspec LaTeX package as it was causing a lot of issues with knitting for various reports
-* Removed lualatex as the forced latex engine for PWD Rmarkdown templates
 
 # pwdthemes 0.1.5
 
