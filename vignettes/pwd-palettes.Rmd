@@ -66,133 +66,27 @@ view_pwd_palette("main")
 ```
 
 
-# Main Dark
+# Primary
 
 ```{r main-dark}
-pc_main_dark <- pc + scale_color_pwd("main_dark")
-pf_main_dark <- pf + scale_fill_pwd("main_dark")
+pc_main_dark <- pc + scale_color_pwd("primary")
+pf_main_dark <- pf + scale_fill_pwd("primary")
 
 pc_main_dark + pf_main_dark
 
-view_pwd_palette("main_dark")
+view_pwd_palette("primary")
 ```
 
 
-# Main Light
+# Highlights
 
 ```{r main-light}
-pc_main_light <- pc + scale_color_pwd("main_light")
-pf_main_light <- pf + scale_fill_pwd("main_light")
+pc_main_light <- pc + scale_color_pwd("highlight")
+pf_main_light <- pf + scale_fill_pwd("highlight")
 
 pc_main_light + pf_main_light
 
-view_pwd_palette("main_light")
+view_pwd_palette("highlight")
 ```
 
 
-# Highlights 
-
-```{r highlights}
-pc_hl <- pc + scale_color_pwd("highlights")
-pf_hl <- pf + scale_fill_pwd("highlights")
-
-pc_hl + pf_hl
-
-view_pwd_palette("highlights")
-```
-
-
-# Highlights Dark
-
-```{r highlights-dark}
-pc_hl_dark <- pc + scale_color_pwd("highlights_dark")
-pf_hl_dark <- pf + scale_fill_pwd("highlights_dark")
-
-pc_hl_dark + pf_hl_dark
-
-view_pwd_palette("highlights_dark")
-```
-
-
-# Highlights Light
-
-```{r highlights-light}
-pc_hl_light <- pc + scale_color_pwd("highlights_light")
-pf_hl_light <- pf + scale_fill_pwd("highlights_light")
-
-pc_hl_light + pf_hl_light
-
-view_pwd_palette("highlights_light")
-```
-
-
-# Map 
-
-```{r map}
-pc_map <- pc + scale_color_pwd("map")
-pf_map <- pf + scale_fill_pwd("map")
-
-pc_map + pf_map
-
-view_pwd_palette("map")
-```
-
-
-# Map Dark
-
-```{r map-dark}
-pc_map_dark <- pc + scale_color_pwd("map_dark")
-pf_map_dark <- pf + scale_fill_pwd("map_dark")
-
-pc_map_dark + pf_map_dark
-
-view_pwd_palette("map_dark")
-```
-
-
-# Map Light 
-
-```{r map-light}
-pc_map_light <- pc + scale_color_pwd("map_light")
-pf_map_light <- pf + scale_fill_pwd("map_light")
-
-pc_map_light + pf_map_light
-
-view_pwd_palette("map_light")
-```
-
-
-# Dark
-
-```{r dark}
-pc_dark <- pc + scale_color_pwd("dark")
-pf_dark <- pf + scale_fill_pwd("dark")
-
-pc_dark + pf_dark
-
-view_pwd_palette("dark")
-```
-
-
-# Light
-
-```{r light}
-pc_light <- pc + scale_color_pwd("light")
-pf_light <- pf + scale_fill_pwd("light")
-
-pc_light + pf_light
-
-view_pwd_palette("light")
-```
-
-
-# Full
-
-```{r full}
-pc_full <- pc + scale_color_pwd("full")
-pf_full <- pf + scale_fill_pwd("full")
-
-pc_full + pf_full
-
-view_pwd_palette("full")
-```

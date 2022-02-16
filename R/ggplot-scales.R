@@ -63,11 +63,11 @@ pwd_palettes <- list(
   #                   "botticelli"),
 
   `main` = pwd_cols("blue", "tango", "persian green", "punch",
-                    "cerulean", "butterfly brush", "resolution blue",
+                    "cerulean", "butterfly bush", "resolution blue",
                     "puce", "jelly bean", "wattle", "genoa"),
 
   `primary` = pwd_cols("blue", "persian green", "cerulean", "resolution blue",
-                         "butterfly brush", "jelly bean", "genoa"),
+                         "butterfly bush", "jelly bean", "genoa"),
 
 
   `highlight` = pwd_cols("tango", "punch",
