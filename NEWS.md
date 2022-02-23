@@ -1,3 +1,7 @@
+# pwdthemes 0.1.8 (2022-02-23)
+
+* added ability to change font size of headers for PWD Report LaTeX template
+
 # pwdthemes 0.1.7 (2022-02-15)
 
 * Updated pwd palettes to match the recommended palettes from PWD's Public Affairs office
