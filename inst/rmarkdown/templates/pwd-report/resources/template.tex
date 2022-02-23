@@ -134,18 +134,38 @@ $endif$
 }
 
 %% fancy headers
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[LO,LE]{\textsl{\rightmark}}
-$if(pageheader)$
-  \fancyhead[RO, RE]{\textbf{$pageheader$}}
+$if(header_font_size)$
+  \newcommand{\changefont}{%
+    \fontsize{$header_font_size$}{11}\selectfont
+  }
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyhead[LO,LE]{\changefont \textsl{\rightmark}}
+  $if(pageheader)$
+    \fancyhead[RO, RE]{\changefont \textbf{$pageheader$}}
+  $else$
+    \fancyhead[RO, RE]{\changefont \textbf{}}
+  $endif$
+  \fancyfoot{}
+  \fancyfoot[C]{\pwdfooter}
+  \fancyfoot[RO, RE]{\thepage}
+  \renewcommand{\footrulewidth}{0.4pt}
 $else$
-  \fancyhead[RO, RE]{\textbf{}}
+  \pagestyle{fancy}
+  \fancyhead{}
+  \fancyhead[LO,LE]{\textsl{\rightmark}}
+  $if(pageheader)$
+    \fancyhead[RO, RE]{\textbf{$pageheader$}}
+  $else$
+    \fancyhead[RO, RE]{\textbf{}}
+  $endif$
+  \fancyfoot{}
+  \fancyfoot[C]{\pwdfooter}
+  \fancyfoot[RO, RE]{\thepage}
+  \renewcommand{\footrulewidth}{0.4pt}
 $endif$
-\fancyfoot{}
-\fancyfoot[C]{\pwdfooter}
-\fancyfoot[RO, RE]{\thepage}
-\renewcommand{\footrulewidth}{0.4pt}
+
+
 
 
 
